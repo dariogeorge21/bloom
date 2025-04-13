@@ -113,16 +113,6 @@ export default function GalleryPage() {
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('photos')
-  const [filter, setFilter] = useState('all')
-  
-  // Filter gallery items based on category
-  const filteredImages = filter === 'all' 
-    ? imageGalleryItems 
-    : imageGalleryItems.filter(item => item.category === filter)
-    
-  const filteredVideos = filter === 'all'
-    ? videoGalleryItems
-    : videoGalleryItems.filter(item => item.category === filter)
   
   // Handle keyboard navigation
   useEffect(() => {
@@ -156,8 +146,8 @@ export default function GalleryPage() {
     if (selectedImageIndex === null) return
     
     const newIndex = direction === 'prev'
-      ? (selectedImageIndex - 1 + filteredImages.length) % filteredImages.length
-      : (selectedImageIndex + 1) % filteredImages.length
+      ? (selectedImageIndex - 1 + imageGalleryItems.length) % imageGalleryItems.length
+      : (selectedImageIndex + 1) % imageGalleryItems.length
       
     setSelectedImageIndex(newIndex)
   }
@@ -166,8 +156,8 @@ export default function GalleryPage() {
     if (selectedVideoIndex === null) return
     
     const newIndex = direction === 'prev'
-      ? (selectedVideoIndex - 1 + filteredVideos.length) % filteredVideos.length
-      : (selectedVideoIndex + 1) % filteredVideos.length
+      ? (selectedVideoIndex - 1 + videoGalleryItems.length) % videoGalleryItems.length
+      : (selectedVideoIndex + 1) % videoGalleryItems.length
       
     setSelectedVideoIndex(newIndex)
   }
@@ -187,16 +177,6 @@ export default function GalleryPage() {
     setSelectedImageIndex(null)
     setSelectedVideoIndex(null)
   }
-
-  const categories = [
-    { label: 'All', value: 'all' },
-    { label: 'Worship', value: 'worship' },
-    { label: 'Community', value: 'community' },
-    { label: 'Prayer', value: 'prayer' },
-    { label: 'Study', value: 'study' },
-    { label: 'Fellowship', value: 'fellowship' },
-    { label: 'Reflection', value: 'reflection' },
-  ]
   
   return (
     <div className="relative">
@@ -213,23 +193,6 @@ export default function GalleryPage() {
             <p className="mx-auto max-w-2xl text-lg text-gray-600 animate-slide-up">
               Moments captured during our spiritual journey together, reflecting the joy, community, and faith we share
             </p>
-          </div>
-          
-          {/* Filters */}
-          <div className="mb-8 flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.value}
-                onClick={() => setFilter(category.value)}
-                className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                  filter === category.value
-                    ? 'bg-blue-800 text-white' 
-                    : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
           </div>
           
           {/* Tabs */}
@@ -259,7 +222,7 @@ export default function GalleryPage() {
           {/* Photos Grid */}
           {activeTab === 'photos' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredImages.map((item, index) => (
+              {imageGalleryItems.map((item, index) => (
                 <div
                   key={item.id}
                   className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer animate-fade-in"
@@ -292,7 +255,7 @@ export default function GalleryPage() {
           {/* Videos Grid */}
           {activeTab === 'videos' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredVideos.map((item, index) => (
+              {videoGalleryItems.map((item, index) => (
                 <div
                   key={item.id}
                   className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer animate-fade-in"
@@ -330,8 +293,8 @@ export default function GalleryPage() {
           {selectedImageIndex !== null && (
             <div className="relative w-full h-[80vh]">
               <Image
-                src={filteredImages[selectedImageIndex].src}
-                alt={filteredImages[selectedImageIndex].alt}
+                src={imageGalleryItems[selectedImageIndex].src}
+                alt={imageGalleryItems[selectedImageIndex].alt}
                 fill
                 className="object-contain"
               />
@@ -365,8 +328,8 @@ export default function GalleryPage() {
               
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                <h3 className="text-lg font-medium">{filteredImages[selectedImageIndex].title}</h3>
-                <p className="text-sm text-gray-300">{filteredImages[selectedImageIndex].description}</p>
+                <h3 className="text-lg font-medium">{imageGalleryItems[selectedImageIndex].title}</h3>
+                <p className="text-sm text-gray-300">{imageGalleryItems[selectedImageIndex].description}</p>
               </div>
               
               {/* Close Button */}
@@ -390,8 +353,8 @@ export default function GalleryPage() {
           {selectedVideoIndex !== null && (
             <div className="relative w-full h-[80vh]">
               <iframe
-                src={filteredVideos[selectedVideoIndex].videoUrl}
-                title={filteredVideos[selectedVideoIndex].title}
+                src={videoGalleryItems[selectedVideoIndex].videoUrl}
+                title={videoGalleryItems[selectedVideoIndex].title}
                 className="absolute inset-0 w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -426,8 +389,8 @@ export default function GalleryPage() {
               
               {/* Video Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white z-10">
-                <h3 className="text-lg font-medium">{filteredVideos[selectedVideoIndex].title}</h3>
-                <p className="text-sm text-gray-300">{filteredVideos[selectedVideoIndex].description}</p>
+                <h3 className="text-lg font-medium">{videoGalleryItems[selectedVideoIndex].title}</h3>
+                <p className="text-sm text-gray-300">{videoGalleryItems[selectedVideoIndex].description}</p>
               </div>
               
               {/* Close Button */}

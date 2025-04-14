@@ -13,7 +13,6 @@ const imageGalleryItems = [
     description: "A moment of deep prayer and collective worship",
     src: "/images/worship.jpg",
     alt: "Worship session with candles lit",
-    category: "worship",
   },
   {
     id: 2,
@@ -21,7 +20,6 @@ const imageGalleryItems = [
     description: "Young people coming together in faith and fellowship",
     src: "/images/worship.jpg",
     alt: "Group of young people in a circle",
-    category: "community",
   },
   {
     id: 3,
@@ -29,7 +27,6 @@ const imageGalleryItems = [
     description: "Seeking God's presence together",
     src: "/images/worship.jpg",
     alt: "Group prayer with hands raised",
-    category: "prayer",
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ const imageGalleryItems = [
     description: "Diving deeper into God's word",
     src: "/images/worship.jpg", 
     alt: "Bible study session",
-    category: "study",
   },
   {
     id: 5,
@@ -45,7 +41,6 @@ const imageGalleryItems = [
     description: "Finding quiet moments to connect with God",
     src: "/images/worship.jpg",
     alt: "Person in quiet reflection with Bible",
-    category: "reflection",
   },
   {
     id: 6,
@@ -53,7 +48,6 @@ const imageGalleryItems = [
     description: "Building relationships that strengthen faith",
     src: "/images/worship.jpg",
     alt: "Friends sharing food and conversation",
-    category: "fellowship",
   },
   {
     id: 7,
@@ -61,7 +55,6 @@ const imageGalleryItems = [
     description: "Expressing joy through music and song",
     src: "/images/worship.jpg",
     alt: "Praise and worship music session",
-    category: "worship",
   },
   {
     id: 8,
@@ -69,17 +62,30 @@ const imageGalleryItems = [
     description: "Experiencing God's presence in nature",
     src: "/images/worship.jpg",
     alt: "Group gathered outdoors",
-    category: "community",
   },
+  {
+    id: 9,
+    title: "Prayer Night",
+    description: "An evening of collective prayer and intercession",
+    src: "/images/worship.jpg",
+    alt: "Group prayer with hands raised",
+  },
+  {
+    id: 10,
+    title: "Scripture Study",
+    description: "Diving deeper into God's word",
+    src: "/images/worship.jpg",
+    alt: "Bible study session",
+  }
 ]
 
 const videoGalleryItems = [
   {
     id: 1,
-    title: "Worship Highlights",
-    description: "Beautiful moments from our worship sessions",
+    title: "Blooming Roses 2024",
+    description: "Beautiful moments from the 2024 Blooming Roses event",
     thumbnail: "/images/worship.jpg",
-    videoUrl: "/videos/video-198.mp4", // Replace with actual videos
+    videoUrl: "./public/videos/(1).mp4", // Replace with actual videos
     category: "worship",
   },
   {
@@ -87,7 +93,7 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     thumbnail: "/images/worship.jpg",
-    videoUrl: "/videos/video-155.mp4", // Replace with actual videos
+    videoUrl: "/videos/video(2).mp4", // Replace with actual videos
     category: "testimonies",
   },
   {

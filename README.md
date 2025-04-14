@@ -1,6 +1,6 @@
 # Blooming Roses Event Website
 
-A frontend-only religious event website for "Blooming Roses" organized by Jesus Youth Pala. The website is built using Next.js and Shadcn/UI components, featuring a clean, elegant design with smooth animations and a spiritual aesthetic.
+An event website for "Blooming Roses" organized by Jesus Youth Pala. The website is built using Next.js and Shadcn/UI components, featuring a clean, elegant design with smooth animations and a spiritual aesthetic.
 
 ## Features
 
@@ -45,25 +45,6 @@ A frontend-only religious event website for "Blooming Roses" organized by Jesus 
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Project Structure
-
-```
-blooming/
-├── public/              # Static files
-│   └── images/          # Image assets
-├── src/
-│   ├── app/             # App router routes
-│   │   ├── about/       # About page
-│   │   ├── gallery/     # Gallery page
-│   │   ├── page.tsx     # Home page
-│   │   └── layout.tsx   # Root layout
-│   ├── components/      # React components
-│   │   ├── ui/          # shadcn/ui components
-│   │   ├── header.tsx   # Site header
-│   │   └── footer.tsx   # Site footer
-│   └── lib/             # Utility functions
-└── tailwind.config.ts   # Tailwind configuration
-```
 
 ## Build for Production
 

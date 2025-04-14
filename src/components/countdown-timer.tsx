@@ -18,8 +18,8 @@ export function CountdownTimer() {
   })
 
   useEffect(() => {
-    // Set the event date - April 24, 2025
-    const eventDate = new Date('2025-04-24T00:00:00')
+    // Set the event date - April 24, 2025 at 5:00 PM
+    const eventDate = new Date('2025-04-24T17:00:00')
     
     const timer = setInterval(() => {
       const now = new Date()

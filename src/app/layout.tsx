@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Chatbot } from "@/components/chatbot";
 
 export const metadata: Metadata = {
   title: "Blooming Roses | Jesus Youth Pala",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Chatbot />
         </div>
       </body>
     </html>

@@ -15,7 +15,7 @@ export function Footer() {
           <div className="flex items-center space-x-4">
             <Link
               href="https://bit.ly/blooming25Registration"
-              className="text-sm text-gray-600 underline-offset-4 transition-colors hover:text-gray-900 hover:underline"
+              className="rounded-md bg-blue-800 px-4 py-2 text-white text-sm font-medium transition-colors hover:bg-blue-700"
               target="_blank"
               rel="noopener noreferrer"
             >

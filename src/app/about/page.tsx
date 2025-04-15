@@ -81,54 +81,28 @@ export default function AboutPage() {
             {/* Event Details */}
             <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.4s" }}>
               <div className="p-8 rounded-2xl bg-white shadow-md border border-gray-100">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-800 mb-4">Event Details</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">📍</span> 
-                        <div>
-                          <span className="font-medium">Location:</span> Tabore Kodumpidi, Pala
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">📅</span> 
-                        <div>
-                          <span className="font-medium">Dates:</span> April 24-27, 2025
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">💰</span> 
-                        <div>
-                          <span className="font-medium">Registration Fee:</span> ₹800
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-xl font-bold text-blue-800 mb-4">Contact Information</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">📞</span> 
-                        <div>
-                          <span className="font-medium">Anto:</span> 62825 86348
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">📞</span> 
-                        <div>
-                          <span className="font-medium">Neyamol:</span> 85908 15612
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">🏠</span>
-                        <div>
-                          <span className="font-medium">Organized by:</span> Jesus Youth Pala
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">Event Details</h3>
+                <div className="max-w-md mx-auto">
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3 mt-1">📍</span> 
+                      <div>
+                        <span className="font-medium">Location:</span> Tabore Kodumpidi, Pala
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3 mt-1">📅</span> 
+                      <div>
+                        <span className="font-medium">Dates:</span> April 24-27, 2025
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-3 mt-1">💰</span> 
+                      <div>
+                        <span className="font-medium">Registration Fee:</span> ₹800
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

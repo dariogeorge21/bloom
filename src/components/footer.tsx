@@ -9,7 +9,7 @@ export function Footer() {
             <p className="text-center text-sm leading-loose text-gray-600 md:text-left">
               &copy; {new Date().getFullYear()} Blooming Roses. All rights reserved. 
               <br className="hidden sm:inline" />
-              <br />Organized by Jesus Youth Pala.
+               Organized by Jesus Youth Pala.
             </p>
           </div>
           <div className="flex items-center space-x-4">

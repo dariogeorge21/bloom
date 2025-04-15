@@ -30,11 +30,11 @@ export default function AboutPage() {
                   className="object-contain"
                 />
               </div>
-              <h2 className="text-2xl font-bold tracking-tight">
+              {/* <h2 className="text-2xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent">
                   Blooming Roses 25
                 </span>
-              </h2>
+              </h2> */}
               <p className="text-xl text-blue-800 animate-slide-up font-medium">
                 April 24–27 at Tabore Kodumpidi, Pala
               </p>
@@ -229,9 +229,14 @@ export default function AboutPage() {
               
               <div className="flex flex-col items-center justify-center space-y-6">
                 <div className="w-48 h-48 bg-white p-4 rounded-xl shadow-md border border-gray-200">
-                  {/* Placeholder for QR code - replace with actual QR code image */}
-                  <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">QR Code</span>
+                  {/* Actual QR code image */}
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src="/images/bloomingroses/qr.png" 
+                      alt="Registration QR Code" 
+                      fill
+                      className="object-contain"
+                    />
                   </div>
                 </div>
                 

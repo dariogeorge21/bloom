@@ -8,7 +8,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="relative w-10 h-10 mr-2">
+              <div className="relative w-14 h-14">
                 <Image 
                   src="/images/bloomingroses/logo.png" 
                   alt="Blooming Roses Logo" 
@@ -16,7 +16,6 @@ export function Header() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold tracking-tight">Blooming Roses</span>
             </Link>
           </div>
           <nav className="flex items-center space-x-6 text-sm font-medium">

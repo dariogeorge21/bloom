@@ -9,7 +9,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-pink-50 z-[-1]" />
       <div className="absolute top-40 right-10 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 z-[-1]" />
       <div className="absolute bottom-40 left-10 w-96 h-96 bg-pink-100 rounded-full blur-3xl opacity-20 z-[-1]" />
-      
+
       {/* Decorative elements for spiritual theme */}
       <div className="absolute top-20 left-10 opacity-10">
         <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +21,7 @@ export default function Home() {
           <path d="M12 3L14.5 8.5L21 9.5L16.5 13.5L17.5 20L12 17L6.5 20L7.5 13.5L3 9.5L9.5 8.5L12 3Z" fill="currentColor" className="text-pink-700" />
         </svg>
       </div>
-      
+
       {/* Enhanced Hero Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
@@ -29,8 +29,8 @@ export default function Home() {
             <div className="space-y-4 animate-fade-in">
               <div className="relative w-64 h-64 mx-auto">
         <Image
-                  src="/images/bloomingroses/logo.png" 
-                  alt="Blooming Roses Logo" 
+                  src="/images/bloomingroses/logo.png"
+                  alt="Blooming Roses Logo"
                   fill
           priority
                   className="object-contain"
@@ -44,7 +44,7 @@ export default function Home() {
                 <br />
                 <span className="font-medium text-blue-700">April 24–27, 2025 • Tabore Kodumpidi, Pala</span>
               </p><br />
-              
+
               {/* Spiritual quote */}
               <div className="mt-4 mx-auto max-w-2xl">
                 <p className="italic text-gray-600 border-l-4 border-blue-200 pl-4 py-2 text-lg">
@@ -53,13 +53,13 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
+
             {/* Countdown Timer */}
             <div className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
               <p className="text-xl font-medium mb-4 text-blue-800">Your Spiritual Journey Begins In:</p>
               <CountdownTimer />
             </div>
-            
+
             {/* Enhanced CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Video & Photo Highlight Cards */}
       <section className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
@@ -92,7 +92,7 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
             Experience the joy and transformation of past Blooming Roses events through our collection of cherished memories
           </p>
-          
+
           <div className="grid gap-8 md:grid-cols-2">
             {/* Video highlight card */}
             <Link
@@ -132,7 +132,7 @@ export default function Home() {
                 </span>
               </div>
             </Link>
-            
+
             {/* Photo highlight card */}
             <Link
               href="/gallery?tab=photos"
@@ -173,11 +173,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Enhanced Event Highlights */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent z-[-1]" />
-        
+
         {/* Spiritual symbol decorations */}
         <div className="absolute top-20 right-20 opacity-5">
           <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" className="text-blue-800">
@@ -189,7 +189,7 @@ export default function Home() {
             <circle cx="12" cy="13" r="2" />
           </svg>
         </div>
-        
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Why Blooming Roses is Life-Changing</h2>
@@ -197,7 +197,7 @@ export default function Home() {
               Discover the unique aspects of our event that create lasting spiritual impact and personal transformation
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-xl bg-white p-6 shadow-md hover:shadow-lg transition-all border border-blue-100">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-4">
@@ -210,7 +210,7 @@ export default function Home() {
                 Deepen your relationship with God through inspiring sessions, adoration, and a vibrant prayer life.
               </p>
             </div>
-            
+
             <div className="rounded-xl bg-white p-6 shadow-md hover:shadow-lg transition-all border border-blue-100">
               <div className="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -222,7 +222,7 @@ export default function Home() {
                 Form meaningful connections with peers who share your values and faith journey.
               </p>
             </div>
-            
+
             <div className="rounded-xl bg-white p-6 shadow-md hover:shadow-lg transition-all border border-blue-100">
               <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -235,7 +235,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          
+
           {/* Testimonial Section */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center text-blue-800 mb-8">What Participants Say</h3>
@@ -245,8 +245,8 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
                     <Image
-                      src="/images/testimonies/ann.jpg" 
-                      alt="Ann Maria Saju" 
+                      src="/images/testimonies/ann.jpg"
+                      alt="Ann Maria Saju"
                       fill
                       className="object-cover"
                       unoptimized
@@ -260,7 +260,7 @@ export default function Home() {
                       &ldquo;It was only after the Blooming Rose program that I was able to love and know the Jesus within me more. I came to that program for the opportunity to spend time with my friends for two or three days, but when I returned to my home, I realized how I could spend the rest of my life with Jesus.&rdquo;
                     </p>
                     <p className="font-medium text-blue-800">Ann Maria Saju</p>
-                    <p className="text-xs text-gray-500">Participant • Blooming Roses '23</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;23</p>
                   </div>
                 </div>
               </div>
@@ -270,8 +270,8 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
                     <Image
-                      src="/images/testimonies/agnes.jpg" 
-                      alt="Agnes Maria Sibi" 
+                      src="/images/testimonies/agnes.jpg"
+                      alt="Agnes Maria Sibi"
                       fill
                       className="object-cover"
                       unoptimized
@@ -285,7 +285,7 @@ export default function Home() {
                       &ldquo;You did not choose me, but I chose you (John. 15:16). I understood His call for me as a child of GOD, who needs to be giving His love which I received.&rdquo;
                     </p>
                     <p className="font-medium text-pink-800">Agnes Maria Sibi</p>
-                    <p className="text-xs text-gray-500">Participant • Blooming Roses '21</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;21</p>
                   </div>
                 </div>
               </div>
@@ -295,8 +295,8 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
                     <Image
-                      src="/images/testimonies/tija.jpg" 
-                      alt="Tija Thomas" 
+                      src="/images/testimonies/tija.jpg"
+                      alt="Tija Thomas"
                       fill
                       className="object-cover"
                       unoptimized
@@ -310,7 +310,7 @@ export default function Home() {
                       &ldquo;Those 4 days I experienced Love of God through many people. It spiritually helped me a lot. Got the chance to be more closer to Jesus.&rdquo;
                     </p>
                     <p className="font-medium text-indigo-800">Tija Thomas</p>
-                    <p className="text-xs text-gray-500">Participant • Blooming Roses '24</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>
                   </div>
                 </div>
               </div>
@@ -320,8 +320,8 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
           <Image
-                      src="/images/testimonies/angel.jpg" 
-                      alt="Angel Rose" 
+                      src="/images/testimonies/angel.jpg"
+                      alt="Angel Rose"
                       fill
                       className="object-cover"
                       unoptimized
@@ -332,16 +332,16 @@ export default function Home() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="text-gray-700 italic mb-3 text-sm">
-                      &ldquo;Amidst 'Blooming roses', my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.&rdquo;
+                      &ldquo;Amidst &apos;Blooming roses&apos;, my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.&rdquo;
                     </p>
                     <p className="font-medium text-purple-800">Angel Rose</p>
-                    <p className="text-xs text-gray-500">Participant • Blooming Roses '24</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="mt-16 text-center">
             <Link

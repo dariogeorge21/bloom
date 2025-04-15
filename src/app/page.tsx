@@ -254,7 +254,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 italic mb-4">
                   &ldquo;Blooming Roses was a turning point in my spiritual journey. The fellowship, prayer sessions, and guidance helped me develop a deeper relationship with Christ. I&apos;ve made friends that will last a lifetime.&rdquo;
                 </p>
-                {/* <p className="font-medium text-blue-800">Participant Name</p> */}
+                <p className="font-medium text-blue-800">Participant Name</p>
                 <p className="text-sm text-gray-500">Past Participant • Blooming Roses 23</p>
               </div>
             </div>

@@ -84,8 +84,8 @@ const imageGalleryItems = [
 const videoGalleryItems = [
   {
     id: 1,
-    title: "Blooming Roses 2024",
-    description: "Beautiful moments from the 2024 Blooming Roses event",
+    title: "Blooming Roses 2022",
+    description: "Beautiful moments from the Blooming Roses 2022",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695447/bloom_2k22_jgdp3j.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695447/bloom_2k22_jgdp3j.jpg",
     category: "worship",
@@ -94,7 +94,7 @@ const videoGalleryItems = [
   {
     id: 2,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Prayer and worship session from the 2022 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695425/blooming_22_dqxhka.jpg",
     category: "testimonies",
@@ -102,7 +102,7 @@ const videoGalleryItems = [
   {
     id: 3,
     title: "Event Recap",
-    description: "Looking back at the joy and growth from our last event",
+    description: "Highlights from the 2023 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695376/1st_day_highlights_-_23bloom_z06cp2.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695376/1st_day_highlights_-_23bloom_z06cp2.jpg",
     category: "event",
@@ -110,7 +110,7 @@ const videoGalleryItems = [
   {
     id: 4,
     title: "Prayer Night",
-    description: "An evening of collective prayer and intercession",
+    description: "Prayer night from the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/1st_day_highlights_-_24bloom_ioyeij.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695352/1st_day_highlights_-_24bloom_ioyeij.jpg",
     category: "prayer",
@@ -118,7 +118,7 @@ const videoGalleryItems = [
   {
     id: 5,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Highlights from the 2023 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695333/0th_day_highlights_-_23bloom_dwkbpz.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695333/0th_day_highlights_-_23bloom_dwkbpz.jpg",
     category: "testimonies",
@@ -126,7 +126,7 @@ const videoGalleryItems = [
   {
     id: 6,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Highlights from the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695334/2nd_day_highlights_-_24bloom_h4zswd.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695334/2nd_day_highlights_-_24bloom_h4zswd.jpg",
     category: "testimonies",
@@ -134,7 +134,7 @@ const videoGalleryItems = [
   {
     id: 7,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Promo video for the 2022 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695438/bloom_22_qsgt2p.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695438/bloom_22_qsgt2p.jpg",
     category: "testimonies",
@@ -142,7 +142,7 @@ const videoGalleryItems = [
   {
     id: 8,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Summation of the 2023 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695415/23_bloom_summation_uvlawz.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695415/23_bloom_summation_uvlawz.jpg",
     category: "testimonies",
@@ -150,7 +150,7 @@ const videoGalleryItems = [
   {
     id: 9,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Highlights from the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.jpg",
     category: "testimonies",
@@ -158,7 +158,7 @@ const videoGalleryItems = [
   {
     id: 10,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Promo video for the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695409/24_bloom_promo_qcecfb.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695409/24_bloom_promo_qcecfb.jpg",
     category: "testimonies",
@@ -166,7 +166,7 @@ const videoGalleryItems = [
   {
     id: 11,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Highlights from the 2023 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695345/blloom_23_qesx6y.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695345/blloom_23_qesx6y.jpg",
     category: "testimonies",
@@ -174,11 +174,51 @@ const videoGalleryItems = [
   {
     id: 12,
     title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
+    description: "Promo video for the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695372/bloom_24_promo_onxbtt.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
     category: "testimonies",
   },
+  {
+    id: 13,
+    title: "Testimonies of Faith",
+    description: "Promo video for the 2025 Blooming Roses",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744700110/Blooming_Roses_25_is_here....But_spots_are_disappearing_FAST_LAST_CHANCE_ALERT_REGISTER_NOW_BEFORE_IT_S_TOO_LATE_CLICK_HERE_TO_SECURE_YOUR_SPOT_https---bit.ly-blooming25Registration_Seriously_d_ufuckp.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 14,
+    title: "Testimonies of Faith",
+    description: "Promo video for the 2025 Blooming Roses",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744700107/BLOOMING_ROSES_25_A_Celebration_of_Teens_Tabore_Kodumpidi_Pala_Registration_Fee-_800_For_-_8_to_12_ClassesScan_the_QR_code_and_register_now_Or_use_this_Link_to_registerhttps---bit.ly-blooming_zxtbvd.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 15,
+    title: "Testimonies of Faith",
+    description: "Promo video for the 2025 Blooming Roses",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744700107/BLOOMING_ROSES_25_A_Celebration_of_Teens_Tabore_Kodumpidi_Pala_Registration_Fee-_800_For_-_8_to_12_ClassesScan_the_QR_code_and_register_now_Or_use_this_Link_to_registerhttps---bit.ly-blooming_zxtbvd.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 16,
+    title: "Testimonies of Faith",
+    description: "Promo video for the 2025 Blooming Roses",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744700102/1%E2%83%A35%E2%83%A3_days_to_go..._BLOOMING_ROSES_25_A_Celebration_of_Teens_Tabore_Prarthanalayam_Kodumpidi_Pala_For_-_8_to_12_ClassesScan_the_QR_code_and_register_now_Or_use_this_Link_to_registerhttps---bit._pd3gl6.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 17,
+    title: "Testimonies of Faith",
+    description: "Promo video for the 2025 Blooming Roses",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744700090/1%E2%83%A38%E2%83%A3_days_to_go..._BLOOMING_ROSES_25_A_Celebration_of_Teens_Tabore_Prarthanalayam_Kodumpidi_Pala_For-_8_to_12_ClassesScan_the_QR_code_and_register_now_Or_use_this_Link_to_registerhttps---bit.ly-bloom_jus0uw.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
+    category: "testimonies",
+  }
 ]
 
 export default function GalleryPage() {
@@ -292,6 +332,16 @@ export default function GalleryPage() {
             </button>
           </div>
           
+          {/* Previous Blooming Roses heading - now moved above the videos grid */}
+          {activeTab === 'videos' && (
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold text-blue-800 mb-4">Previous Blooming Roses</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Click & watch highlights from our past events and relive the beautiful moments
+              </p>
+            </div>
+          )}
+          
           {/* Photos Grid */}
           {activeTab === 'photos' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -360,16 +410,6 @@ export default function GalleryPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          )}
-          
-          {/* Add heading for previous editions */}
-          {activeTab === 'videos' && (
-            <div className="mt-16 mb-8 text-center">
-              <h2 className="text-2xl font-bold text-blue-800 mb-4">Previous Blooming Roses</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Watch highlights from our past events and relive the beautiful moments
-              </p>
             </div>
           )}
         </Container>

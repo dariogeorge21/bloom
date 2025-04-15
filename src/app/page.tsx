@@ -79,41 +79,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Testimonial Section */}
-      <section className="py-14 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Transformative Experiences
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from those who have participated in our previous events
-            </p>
-          </div>
-          
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-              <p className="italic text-gray-600 mb-4">
-                &quot;Blooming Roses was a life-changing experience for me. I found renewed faith and made lifelong friends who support me in my spiritual journey.&quot;
-              </p>
-              <p className="font-medium">- Sarah, 23</p>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-              <p className="italic text-gray-600 mb-4">
-                &quot;The worship sessions were so powerful. I felt God&apos;s presence in a way I never had before, and it completely transformed how I approach my faith.&quot;
-              </p>
-              <p className="font-medium">- Michael, 19</p>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-              <p className="italic text-gray-600 mb-4">
-                &quot;The community I found at Blooming Roses continues to inspire and encourage me. I&apos;m so grateful for the guidance and fellowship I experienced.&quot;
-              </p>
-              <p className="font-medium">- Rebecca, 25</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

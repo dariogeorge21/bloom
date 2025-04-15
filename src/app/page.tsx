@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { CountdownTimer } from "@/components/countdown-timer"
 
@@ -12,11 +13,15 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-center space-y-10 text-center">
             <div className="space-y-4 animate-fade-in">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                <span className="text-blue-800">
-                  Blooming Roses
-                </span>
-              </h1>
+              <div className="relative w-64 h-64 mx-auto">
+                <Image 
+                  src="/images/bloomingroses/logo.png" 
+                  alt="Blooming Roses Logo" 
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
               <p className="mx-auto max-w-[700px] text-lg text-gray-600 md:text-xl">
                 Organized by Jesus Youth Pala
                 <br />

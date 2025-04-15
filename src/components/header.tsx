@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   return (
@@ -6,8 +7,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              Blooming Roses
+            <Link href="/" className="flex items-center">
+              <div className="relative w-10 h-10 mr-2">
+                <Image 
+                  src="/images/bloomingroses/logo.png" 
+                  alt="Blooming Roses Logo" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xl font-bold tracking-tight">Blooming Roses</span>
             </Link>
           </div>
           <nav className="flex items-center space-x-6 text-sm font-medium">

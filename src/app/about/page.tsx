@@ -117,13 +117,14 @@ export default function AboutPage() {
                 {/* Anto's Contact Card */}
                 <div className="flex flex-col items-center rounded-xl bg-white p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4 bg-blue-100 border-2 border-blue-200">
-                    {/* Placeholder profile image - replace with actual photo */}
-                    <div className="absolute inset-0 flex items-center justify-center text-blue-800 text-5xl font-bold">
-                      A
-                    </div>
+                    <Image 
+                      src="/images/about/anto.jpg" 
+                      alt="Anto - Event Coordinator" 
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">Anto</h3>
-                  <p className="text-blue-700 font-medium mb-2">Event Coordinator</p>
                   <a 
                     href="tel:+916282586348" 
                     className="flex items-center justify-center px-4 py-2 bg-blue-50 hover:bg-blue-100 rounded-full text-blue-800 transition-colors"
@@ -138,13 +139,14 @@ export default function AboutPage() {
                 {/* Neyamol's Contact Card */}
                 <div className="flex flex-col items-center rounded-xl bg-white p-6 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
                   <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4 bg-pink-100 border-2 border-pink-200">
-                    {/* Placeholder profile image - replace with actual photo */}
-                    <div className="absolute inset-0 flex items-center justify-center text-pink-800 text-5xl font-bold">
-                      N
-                    </div>
+                    <Image 
+                      src="/images/about/neyamol.jpg" 
+                      alt="Neyamol - Event Coordinator" 
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">Neyamol</h3>
-                  <p className="text-pink-700 font-medium mb-2">Event Coordinator</p>
                   <a 
                     href="tel:+918590815612" 
                     className="flex items-center justify-center px-4 py-2 bg-pink-50 hover:bg-pink-100 rounded-full text-pink-800 transition-colors"

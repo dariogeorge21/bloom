@@ -1,14 +1,32 @@
+'use client'
+
 import Link from "next/link"
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
-
-export const metadata = {
-  title: "About | Blooming Roses",
-  description: "Join Blooming Roses 25, an exciting event for teens from April 24-27 at Tabore Kodumpidi, Pala.",
-}
+import { useEffect } from "react"
 
 export default function AboutPage() {
+  // Add effect to handle hash navigation
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # character
+      const targetId = hash.substring(1);
+      
+      // Find the element with the matching ID
+      const targetElement = document.getElementById(targetId);
+      
+      // If the element exists, scroll to it
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200); // Small delay to ensure page has loaded
+      }
+    }
+  }, []);
+
   return (
     <div className="relative">
       {/* Background decorations */}
@@ -72,7 +90,7 @@ export default function AboutPage() {
                 </div>
                 
                 <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 shadow-sm border border-indigo-200">
-                  <p className="text-lg font-medium text-indigo-800 mb-2">✨ Live Adoration & Sacramental Life</p>
+                  <p className="text-lg font-medium text-indigo-800 mb-2">✨ Adoration & Sacramental Life</p>
                   <p className="text-gray-700">Deepen your faith through adoration, prayer, and the sacraments in a supportive community.</p>
                 </div>
               </div>
@@ -161,7 +179,7 @@ export default function AboutPage() {
             </div>
             
             {/* Location Map Section */}
-            <div className="animate-slide-up" style={{ animationDelay: "0.6s" }}>
+            <div className="animate-slide-up" style={{ animationDelay: "0.6s" }} id="location">
               <h2 className="text-2xl font-bold text-center mb-6">
                 <span className="text-blue-800">📍 Event Location</span>
               </h2>

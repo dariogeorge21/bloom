@@ -172,6 +172,30 @@ export default function GalleryPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('photos')
   
+  // Check for tab query parameter on page load
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    
+    if (tabParam === 'videos' || tabParam === 'photos') {
+      setActiveTab(tabParam);
+      // Update the URL without refreshing the page
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('tab', tabParam);
+      window.history.replaceState({}, '', newUrl);
+      
+      // If videos tab is selected, scroll to the videos section
+      if (tabParam === 'videos') {
+        setTimeout(() => {
+          const videosElement = document.getElementById('videos');
+          if (videosElement) {
+            videosElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100); // Small delay to ensure the tab has changed
+      }
+    }
+  }, []);
+
   const navigateImages = useCallback((direction: 'prev' | 'next') => {
     if (selectedImageIndex === null) return
     
@@ -272,6 +296,7 @@ export default function GalleryPage() {
                   ? 'border-blue-800 text-blue-800' 
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
+              id="videos-tab"
             >
               Videos
             </button>
@@ -279,7 +304,7 @@ export default function GalleryPage() {
           
           {/* Previous Blooming Roses heading - now moved above the videos grid */}
           {activeTab === 'videos' && (
-            <div className="mb-8 text-center">
+            <div className="mb-8 text-center" id="videos">
               <h2 className="text-2xl font-bold text-blue-800 mb-4">Previous Blooming Roses</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Click & watch highlights from our past events and relive the beautiful moments

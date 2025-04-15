@@ -96,7 +96,10 @@ export default function Home() {
           
           <div className="grid gap-8 md:grid-cols-2">
             {/* Video highlight card */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-blue-100">
+            <Link
+              href="/gallery?tab=videos"
+              className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-blue-100"
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/70 z-10" />
               <Image
                 src="https://res.cloudinary.com/dobqxxtml/video/upload/so_2.7/v1744695372/bloom_24_promo_onxbtt.jpg"
@@ -115,27 +118,27 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider opacity-75">Watch Now</p>
+                    <p className="text-xs uppercase tracking-wider opacity-75">WATCH NOW</p>
                     <h3 className="text-xl font-bold">Previous Blooming Roses</h3>
                   </div>
                 </div>
                 <p className="mb-4 opacity-85">
                   See the beautiful moments and transformations from our past events
                 </p>
-                <Link
-                  href="/gallery?tab=videos"
-                  className="inline-flex items-center font-medium text-white/90 hover:text-white group-hover:underline"
-                >
+                <span className="inline-flex items-center font-medium text-white/90 group-hover:underline">
                   View All Videos
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
             
             {/* Photo highlight card */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-pink-100">
+            <Link
+              href="/gallery?tab=photos"
+              className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-pink-100"
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-pink-900/70 to-purple-900/70 z-10" />
               <Image
                 src="https://res.cloudinary.com/dobqxxtml/image/upload/v1744693380/previous_blooming_nkakyy.jpg"
@@ -153,24 +156,21 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider opacity-75">Browse Gallery</p>
+                    <p className="text-xs uppercase tracking-wider opacity-75">BROWSE GALLERY</p>
                     <h3 className="text-xl font-bold">Photo Memories</h3>
                   </div>
                 </div>
                 <p className="mb-4 opacity-85">
                   Explore our collection of moments capturing joy, friendship and spiritual growth
                 </p>
-                <Link
-                  href="/gallery?tab=photos"
-                  className="inline-flex items-center font-medium text-white/90 hover:text-white group-hover:underline"
-                >
+                <span className="inline-flex items-center font-medium text-white/90 group-hover:underline">
                   View All Photos
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </Link>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -255,7 +255,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 italic mb-4">
                   "Blooming Roses was a turning point in my spiritual journey. The fellowship, prayer sessions, and guidance helped me develop a deeper relationship with Christ. I've made friends that will last a lifetime."
                 </p>
-                <p className="font-medium text-blue-800"></p>
+                <p className="font-medium text-blue-800">Participant Name</p>
                 <p className="text-sm text-gray-500">Past Participant • Blooming Roses 23</p>
               </div>
             </div>

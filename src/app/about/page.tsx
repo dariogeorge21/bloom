@@ -203,7 +203,7 @@ export default function AboutPage() {
               
               <div className="flex flex-col items-center justify-center space-y-6">
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-                  <div className="relative w-full h-full">
+                  <div className="relative w-64 h-64">
                     <Image 
                       src="/images/bloomingroses/qr.png" 
                       alt="Registration QR Code" 

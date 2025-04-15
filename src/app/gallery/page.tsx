@@ -5,20 +5,21 @@ import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
-// Sample gallery items - in a real application, these would come from a data source
+// Sample gallery items - Replace these with your Cloudinary URLs
 const imageGalleryItems = [
   {
     id: 1,
     title: "Worship Session",
     description: "A moment of deep prayer and collective worship",
-    src: "/images/worship.jpg",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744692497/BLOOMING_ROSES_25_A_Celebration_of_Teens_Hey_Teens_Get_ready_for_Blooming_Roses_25_an_exciting_and_life-changing_event_just_for_YOU_Join_us_from_April_24th_to_April_27th_at_Tabore_Kodumpidi_Pala_for_four_days_fil_flyftm.webp",
     alt: "Worship session with candles lit",
   },
+  // Add more items with Cloudinary URLs
   {
     id: 2,
     title: "Community Gathering",
     description: "Young people coming together in faith and fellowship",
-    src: "/images/worship.jpg",
+    src: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", // Example - replace with your URL
     alt: "Group of young people in a circle",
   },
   {
@@ -79,15 +80,17 @@ const imageGalleryItems = [
   }
 ]
 
+// Sample video gallery items - Replace with your Cloudinary video URLs
 const videoGalleryItems = [
   {
     id: 1,
     title: "Blooming Roses 2024",
     description: "Beautiful moments from the 2024 Blooming Roses event",
-    thumbnail: "/images/worship.jpg",
-    videoUrl: "./public/videos/(1).mp4", // Replace with actual videos
+    thumbnail: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", // Example - replace with your URL
+    videoUrl: "https://res.cloudinary.com/demo/video/upload/v1689854466/samples/sea-turtle.mp4", // Example - replace with your URL
     category: "worship",
   },
+  // Add more items with Cloudinary URLs
   {
     id: 2,
     title: "Testimonies of Faith",
@@ -242,6 +245,7 @@ export default function GalleryPage() {
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      unoptimized={item.src.startsWith('https://')} // Don't optimize external URLs
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
@@ -275,6 +279,7 @@ export default function GalleryPage() {
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      unoptimized={item.thumbnail.startsWith('https://')} // Don't optimize external URLs
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
@@ -303,6 +308,7 @@ export default function GalleryPage() {
                 alt={imageGalleryItems[selectedImageIndex].alt}
                 fill
                 className="object-contain"
+                unoptimized={imageGalleryItems[selectedImageIndex].src.startsWith('https://')}
               />
               
               {/* Navigation Arrows */}
@@ -358,13 +364,16 @@ export default function GalleryPage() {
         <DialogContent className="max-w-5xl p-0 bg-black/90 border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
           {selectedVideoIndex !== null && (
             <div className="relative w-full h-[80vh]">
-              <iframe
+              {/* Video player using HTML5 video element for better Cloudinary compatibility */}
+              <video 
                 src={videoGalleryItems[selectedVideoIndex].videoUrl}
-                title={videoGalleryItems[selectedVideoIndex].title}
                 className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+                controls
+                autoPlay
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
               
               {/* Navigation Arrows */}
               <button 

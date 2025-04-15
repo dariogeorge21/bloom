@@ -80,14 +80,13 @@ const imageGalleryItems = [
   }
 ]
 
-// Sample video gallery items - Replace with your Cloudinary video URLs
+// Sample video gallery items - only needs videoUrl and description
 const videoGalleryItems = [
   {
     id: 1,
     title: "Blooming Roses 2024",
     description: "Beautiful moments from the 2024 Blooming Roses event",
-    thumbnail: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", // Example - replace with your URL
-    videoUrl: "https://res.cloudinary.com/demo/video/upload/v1689854466/samples/sea-turtle.mp4", // Example - replace with your URL
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695447/bloom_2k22_jgdp3j.mp4",
     category: "worship",
   },
   // Add more items with Cloudinary URLs
@@ -95,26 +94,44 @@ const videoGalleryItems = [
     id: 2,
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
-    thumbnail: "/images/worship.jpg",
-    videoUrl: "/videos/video(2).mp4", // Replace with actual videos
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp44",
     category: "testimonies",
   },
   {
     id: 3,
     title: "Event Recap",
     description: "Looking back at the joy and growth from our last event",
-    thumbnail: "/images/worship.jpg",
-    videoUrl: "/videos/video-116.mp4", // Replace with actual videos
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695376/1st_day_highlights_-_23bloom_z06cp2.mp4",
     category: "event",
   },
   {
     id: 4,
     title: "Prayer Night",
     description: "An evening of collective prayer and intercession",
-    thumbnail: "/images/worship.jpg",
-    videoUrl: "/videos/video-97.mp4", // Replace with actual videos
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/1st_day_highlights_-_24bloom_ioyeij.mp4",
     category: "prayer",
   },
+  {
+    id: 5,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695333/0th_day_highlights_-_23bloom_dwkbpz.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 6,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695334/2nd_day_highlights_-_24bloom_h4zswd.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 7,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp44",
+    category: "testimonies",
+  }
 ]
 
 export default function GalleryPage() {
@@ -249,13 +266,12 @@ export default function GalleryPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
-                        <p className="font-medium">{item.title}</p>
+                        <p className="font-medium">{item.description}</p>
                       </div>
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+                    <p className="text-sm text-gray-600">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -273,13 +289,10 @@ export default function GalleryPage() {
                   onClick={() => openVideoDialog(index)}
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <Image
-                      src={item.thumbnail}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      unoptimized={item.thumbnail.startsWith('https://')} // Don't optimize external URLs
+                    <video 
+                      src={item.videoUrl}
+                      className="w-full h-full object-cover"
+                      muted
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
@@ -288,11 +301,20 @@ export default function GalleryPage() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+                    <p className="text-sm text-gray-600">{item.description}</p>
                   </div>
                 </div>
               ))}
+            </div>
+          )}
+          
+          {/* Add heading for previous editions */}
+          {activeTab === 'videos' && (
+            <div className="mt-16 mb-8 text-center">
+              <h2 className="text-2xl font-bold text-blue-800 mb-4">Previous Blooming Roses</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Watch highlights from our past events and relive the beautiful moments
+              </p>
             </div>
           )}
         </Container>
@@ -340,7 +362,6 @@ export default function GalleryPage() {
               
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                <h3 className="text-lg font-medium">{imageGalleryItems[selectedImageIndex].title}</h3>
                 <p className="text-sm text-gray-300">{imageGalleryItems[selectedImageIndex].description}</p>
               </div>
               
@@ -364,7 +385,7 @@ export default function GalleryPage() {
         <DialogContent className="max-w-5xl p-0 bg-black/90 border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
           {selectedVideoIndex !== null && (
             <div className="relative w-full h-[80vh]">
-              {/* Video player using HTML5 video element for better Cloudinary compatibility */}
+              {/* Video player using HTML5 video element */}
               <video 
                 src={videoGalleryItems[selectedVideoIndex].videoUrl}
                 className="absolute inset-0 w-full h-full"
@@ -404,7 +425,6 @@ export default function GalleryPage() {
               
               {/* Video Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white z-10">
-                <h3 className="text-lg font-medium">{videoGalleryItems[selectedVideoIndex].title}</h3>
                 <p className="text-sm text-gray-300">{videoGalleryItems[selectedVideoIndex].description}</p>
               </div>
               

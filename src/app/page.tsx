@@ -237,25 +237,107 @@ export default function Home() {
           </div>
           
           {/* Testimonial Section */}
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-8 shadow-lg border border-blue-100">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
-          <Image
-                  src="/images/testimony/ann.jpg" 
-                  alt="Testimonial" 
-                  fill
-                  className="object-cover"
-                />
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center text-blue-800 mb-8">What Participants Say</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Testimonial 1 - Ann */}
+              <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
+                    <Image
+                      src="/images/testimonies/ann.jpg" 
+                      alt="Ann Maria Saju" 
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <svg className="h-6 w-6 text-blue-300 mb-2 mx-auto sm:mx-0" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="text-gray-700 italic mb-3 text-sm">
+                      &ldquo;It was only after the Blooming Rose program that I was able to love and know the Jesus within me more. I came to that program for the opportunity to spend time with my friends for two or three days, but when I returned to my home, I realized how I could spend the rest of my life with Jesus.&rdquo;
+                    </p>
+                    <p className="font-medium text-blue-800">Ann Maria Saju</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses '23</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <svg className="h-8 w-8 text-blue-300 mb-4" fill="currentColor" viewBox="0 0 32 32">
-                  <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                </svg>
-                <p className="text-lg text-gray-700 italic mb-4">
-                  &ldquo; It was only after the Blooming Rose program that I was able to love and know the Jesus within me more. I came to that program for the opportunity to spend time with my friends for two or three days, but when I returned to my home, I realized how I could spend the rest of my life with Jesus. &rdquo;
-                </p>
-                <p className="font-medium text-blue-800">Ann Maria Saju</p>
-                <p className="text-sm text-gray-500">Past Participant • Blooming Roses 23</p>
+
+              {/* Testimonial 2 - Agnes */}
+              <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 shadow-lg border border-pink-100">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
+                    <Image
+                      src="/images/testimonies/agnes.jpg" 
+                      alt="Agnes Maria Sibi" 
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <svg className="h-6 w-6 text-pink-300 mb-2 mx-auto sm:mx-0" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="text-gray-700 italic mb-3 text-sm">
+                      &ldquo;You did not choose me, but I chose you (John. 15:16). I understood His call for me as a child of GOD, who needs to be giving His love which I received.&rdquo;
+                    </p>
+                    <p className="font-medium text-pink-800">Agnes Maria Sibi</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses '21</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 - Tija */}
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
+                    <Image
+                      src="/images/testimonies/tija.jpg" 
+                      alt="Tija Thomas" 
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <svg className="h-6 w-6 text-indigo-300 mb-2 mx-auto sm:mx-0" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="text-gray-700 italic mb-3 text-sm">
+                      &ldquo;Those 4 days I experienced Love of God through many people. It spiritually helped me a lot. Got the chance to be more closer to Jesus.&rdquo;
+                    </p>
+                    <p className="font-medium text-indigo-800">Tija Thomas</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses '24</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 4 - Angel */}
+              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 shadow-lg border border-purple-100">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
+                    <Image
+                      src="/images/testimonies/angel.jpg" 
+                      alt="Angel Rose" 
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <svg className="h-6 w-6 text-purple-300 mb-2 mx-auto sm:mx-0" fill="currentColor" viewBox="0 0 32 32">
+                      <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                    </svg>
+                    <p className="text-gray-700 italic mb-3 text-sm">
+                      &ldquo;Amidst 'Blooming roses', my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.&rdquo;
+                    </p>
+                    <p className="font-medium text-purple-800">Angel Rose</p>
+                    <p className="text-xs text-gray-500">Participant • Blooming Roses '24</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

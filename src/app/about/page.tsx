@@ -52,7 +52,7 @@ export default function AboutPage() {
             {/* Key Highlights */}
             <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <h2 className="text-2xl font-bold text-center mb-8">
-                <span className="text-blue-800">🔥 Why You Can't Miss This! 🔥</span>
+                <span className="text-blue-800">🔥 Why You Can&apos;t Miss This! 🔥</span>
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -231,7 +231,7 @@ export default function AboutPage() {
             {/* Closing Message */}
             <div className="text-center mt-12 animate-slide-up" style={{ animationDelay: "0.8s" }}>
               <p className="text-xl font-medium text-blue-800">
-                Come, let's grow in faith and fellowship together! 💖
+                Come, let&apos;s grow in faith and fellowship together! 💖
               </p>
               <p className="text-lg font-bold mt-2 text-pink-600">
                 Jesus Youth Pala

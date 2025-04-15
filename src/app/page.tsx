@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Container } from "@/components/ui/container"
 import { CountdownTimer } from "@/components/countdown-timer"
 
 export default function Home() {
@@ -96,19 +95,19 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
               <p className="italic text-gray-600 mb-4">
-                "Blooming Roses was a life-changing experience for me. I found renewed faith and made lifelong friends who support me in my spiritual journey."
+                &quot;Blooming Roses was a life-changing experience for me. I found renewed faith and made lifelong friends who support me in my spiritual journey.&quot;
               </p>
               <p className="font-medium">- Sarah, 23</p>
             </div>
             <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
               <p className="italic text-gray-600 mb-4">
-                "The worship sessions were so powerful. I felt God's presence in a way I never had before, and it completely transformed how I approach my faith."
+                &quot;The worship sessions were so powerful. I felt God&apos;s presence in a way I never had before, and it completely transformed how I approach my faith.&quot;
               </p>
               <p className="font-medium">- Michael, 19</p>
             </div>
             <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
               <p className="italic text-gray-600 mb-4">
-                "The community I found at Blooming Roses continues to inspire and encourage me. I'm so grateful for the guidance and fellowship I experienced."
+                &quot;The community I found at Blooming Roses continues to inspire and encourage me. I&apos;m so grateful for the guidance and fellowship I experienced.&quot;
               </p>
               <p className="font-medium">- Rebecca, 25</p>
             </div>

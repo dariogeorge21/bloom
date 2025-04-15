@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 // Sample gallery items - Replace these with your Cloudinary URLs
 const imageGalleryItems = [
@@ -87,6 +87,7 @@ const videoGalleryItems = [
     title: "Blooming Roses 2024",
     description: "Beautiful moments from the 2024 Blooming Roses event",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695447/bloom_2k22_jgdp3j.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695447/bloom_2k22_jgdp3j.jpg",
     category: "worship",
   },
   // Add more items with Cloudinary URLs
@@ -95,6 +96,7 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695425/blooming_22_dqxhka.jpg",
     category: "testimonies",
   },
   {
@@ -102,6 +104,7 @@ const videoGalleryItems = [
     title: "Event Recap",
     description: "Looking back at the joy and growth from our last event",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695376/1st_day_highlights_-_23bloom_z06cp2.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695376/1st_day_highlights_-_23bloom_z06cp2.jpg",
     category: "event",
   },
   {
@@ -109,6 +112,7 @@ const videoGalleryItems = [
     title: "Prayer Night",
     description: "An evening of collective prayer and intercession",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/1st_day_highlights_-_24bloom_ioyeij.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695352/1st_day_highlights_-_24bloom_ioyeij.jpg",
     category: "prayer",
   },
   {
@@ -116,6 +120,7 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695333/0th_day_highlights_-_23bloom_dwkbpz.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695333/0th_day_highlights_-_23bloom_dwkbpz.jpg",
     category: "testimonies",
   },
   {
@@ -123,6 +128,7 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695334/2nd_day_highlights_-_24bloom_h4zswd.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695334/2nd_day_highlights_-_24bloom_h4zswd.jpg",
     category: "testimonies",
   },
   {
@@ -130,6 +136,7 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695438/bloom_22_qsgt2p.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695438/bloom_22_qsgt2p.jpg",
     category: "testimonies",
   },
   {
@@ -137,34 +144,39 @@ const videoGalleryItems = [
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695415/23_bloom_summation_uvlawz.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695415/23_bloom_summation_uvlawz.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 9,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 10,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695409/24_bloom_promo_qcecfb.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695409/24_bloom_promo_qcecfb.jpg",
+    category: "testimonies",
+  },
+  {
+    id: 11,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695345/blloom_23_qesx6y.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695345/blloom_23_qesx6y.jpg",
     category: "testimonies",
   },
   {
     id: 12,
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
-    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.mp4",
-    category: "testimonies",
-  },
-  {
-    id: 13,
-    title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
-    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695409/24_bloom_promo_qcecfb.mp4",
-    category: "testimonies",
-  },
-  {
-    id: 14,
-    title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
-    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695345/blloom_23_qesx6y.mp4",
-    category: "testimonies",
-  },
-  {
-    id: 15,
-    title: "Testimonies of Faith",
-    description: "Participants share their transformative experiences",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695372/bloom_24_promo_onxbtt.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695372/bloom_24_promo_onxbtt.jpg",
     category: "testimonies",
   },
 ]
@@ -174,6 +186,42 @@ export default function GalleryPage() {
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('photos')
+  
+  const navigateImages = useCallback((direction: 'prev' | 'next') => {
+    if (selectedImageIndex === null) return
+    
+    const newIndex = direction === 'prev'
+      ? (selectedImageIndex - 1 + imageGalleryItems.length) % imageGalleryItems.length
+      : (selectedImageIndex + 1) % imageGalleryItems.length
+      
+    setSelectedImageIndex(newIndex)
+  }, [selectedImageIndex])
+  
+  const navigateVideos = useCallback((direction: 'prev' | 'next') => {
+    if (selectedVideoIndex === null) return
+    
+    const newIndex = direction === 'prev'
+      ? (selectedVideoIndex - 1 + videoGalleryItems.length) % videoGalleryItems.length
+      : (selectedVideoIndex + 1) % videoGalleryItems.length
+      
+    setSelectedVideoIndex(newIndex)
+  }, [selectedVideoIndex])
+  
+  const openImageDialog = (index: number) => {
+    setSelectedImageIndex(index)
+    setIsDialogOpen(true)
+  }
+  
+  const openVideoDialog = (index: number) => {
+    setSelectedVideoIndex(index)
+    setIsDialogOpen(true)
+  }
+  
+  const handleDialogClose = () => {
+    setIsDialogOpen(false)
+    setSelectedImageIndex(null)
+    setSelectedVideoIndex(null)
+  }
   
   // Handle keyboard navigation
   useEffect(() => {
@@ -201,43 +249,7 @@ export default function GalleryPage() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isDialogOpen, selectedImageIndex, selectedVideoIndex, activeTab])
-  
-  const navigateImages = (direction: 'prev' | 'next') => {
-    if (selectedImageIndex === null) return
-    
-    const newIndex = direction === 'prev'
-      ? (selectedImageIndex - 1 + imageGalleryItems.length) % imageGalleryItems.length
-      : (selectedImageIndex + 1) % imageGalleryItems.length
-      
-    setSelectedImageIndex(newIndex)
-  }
-  
-  const navigateVideos = (direction: 'prev' | 'next') => {
-    if (selectedVideoIndex === null) return
-    
-    const newIndex = direction === 'prev'
-      ? (selectedVideoIndex - 1 + videoGalleryItems.length) % videoGalleryItems.length
-      : (selectedVideoIndex + 1) % videoGalleryItems.length
-      
-    setSelectedVideoIndex(newIndex)
-  }
-  
-  const openImageDialog = (index: number) => {
-    setSelectedImageIndex(index)
-    setIsDialogOpen(true)
-  }
-  
-  const openVideoDialog = (index: number) => {
-    setSelectedVideoIndex(index)
-    setIsDialogOpen(true)
-  }
-  
-  const handleDialogClose = () => {
-    setIsDialogOpen(false)
-    setSelectedImageIndex(null)
-    setSelectedVideoIndex(null)
-  }
+  }, [isDialogOpen, selectedImageIndex, selectedVideoIndex, activeTab, navigateImages, navigateVideos])
   
   return (
     <div className="relative">
@@ -324,11 +336,19 @@ export default function GalleryPage() {
                   onClick={() => openVideoDialog(index)}
                 >
                   <div className="relative aspect-video overflow-hidden">
-                    <video 
-                      src={item.videoUrl}
-                      className="w-full h-full object-cover"
-                      muted
-                    />
+                    {/* Video thumbnail */}
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src={item.thumbnailUrl}
+                        alt={`Thumbnail for ${item.description}`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        unoptimized
+                        priority={index < 4} // Prioritize loading for first 4 images
+                      />
+                    </div>
+                    
+                    {/* Play button overlay */}
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
                         <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>

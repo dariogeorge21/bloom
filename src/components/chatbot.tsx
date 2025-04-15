@@ -27,7 +27,58 @@ const faqData = [
   {
     id: 5,
     question: "What should I bring with me?",
-    answer: "Please bring personal items (toiletries, clothes for 4 days), a Bible, notebook, pen, any required medication, and a spirit ready for adventure and growth!"
+    answer: (
+      <div className="space-y-3">
+        <p>Please bring the following items for the event:</p>
+        <div className="mt-3 p-4 bg-amber-100 rounded-md">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center">
+              <span className="text-amber-800 text-lg mr-2">🔔</span>
+              <span className="font-medium text-amber-900">Check List</span>
+            </div>
+          </div>
+          <ul className="space-y-2">
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Holy Bible</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Qurbana Book</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Holy Rosary</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Modest Dressing</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Medicines <span className="text-sm text-amber-800">(if any)</span></span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Toiletries</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Water Bottle</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Blanket</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-5 h-5 border border-amber-700 rounded mr-2"></div>
+              <span>Pillow <span className="text-sm text-amber-800">(if needed)</span></span>
+            </li>
+          </ul>
+        </div>
+        <p className="text-sm">Please make sure you have all necessary items to make your stay comfortable.</p>
+      </div>
+    )
   },
   {
     id: 6,

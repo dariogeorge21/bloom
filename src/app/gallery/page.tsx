@@ -10,7 +10,7 @@ const imageGalleryItems = [
   {
     id: 1,
     title: "Worship Session",
-    description: "A moment of deep prayer and collective worship",
+    description: "Blooming Roses 2025",
     src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744692497/BLOOMING_ROSES_25_A_Celebration_of_Teens_Hey_Teens_Get_ready_for_Blooming_Roses_25_an_exciting_and_life-changing_event_just_for_YOU_Join_us_from_April_24th_to_April_27th_at_Tabore_Kodumpidi_Pala_for_four_days_fil_flyftm.webp",
     alt: "Worship session with candles lit",
   },
@@ -18,11 +18,255 @@ const imageGalleryItems = [
   {
     id: 2,
     title: "Community Gathering",
-    description: "Young people coming together in faith and fellowship",
-    src: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", // Example - replace with your URL
+    description: "Group photo of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744718801/previous_blooming_nkakyy.jpg", // Example - replace with your URL
     alt: "Group of young people in a circle",
   },
-  
+  {
+    id: 3,
+    title: "Prayer Night",
+    description: "Blooming Roses 2022",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744733369/IMG_9357_gbvpnk.jpg", // Example - replace with your URL
+    alt: "Prayer session with candles lit",
+  },
+  {
+    id: 4,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734424/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_vgzamp.jpg",
+    alt: "Volunteers group photo at Blooming Roses",
+  },
+  {
+    id: 5,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734420/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_3_d8luqx.jpg",
+    alt: "Group activities during Blooming Roses event",
+  },
+  {
+    id: 6,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2022",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734419/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_4_nmgvtt.jpg",
+    alt: "Participants engaged in spiritual activities",
+  },
+  {
+    id: 7,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734422/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_1_rvlygu.jpg",
+    alt: "Youth gathering at Blooming Roses event",
+  },
+  {
+    id: 8,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734421/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_2_abzqgg.jpg",
+    alt: "Teens participating in Blooming Roses activities",
+  },
+  {
+    id: 9,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734412/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_3_vnovym.jpg",
+    alt: "Spiritual session at Blooming Roses",
+  },
+  {
+    id: 10,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734413/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_2_uqszyv.jpg",
+    alt: "Group prayer during Blooming Roses",
+  },
+  {
+    id: 11,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734414/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_1_swoewo.jpg",
+    alt: "Teens engaged in worship at Blooming Roses",
+  },
+  {
+    id: 12,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734416/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_6_cwipec.jpg",
+    alt: "Volunteers and participants at Blooming Roses",
+  },
+  {
+    id: 13,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734418/Blooming_Roses_23_%EF%B8%8FVolunteersincomplete_frame_...._teens_teensministry_jesusyouthpala_jesusyouth_pala_5_xrvrga.jpg",
+    alt: "Group activities at Blooming Roses retreat",
+  },
+  {
+    id: 14,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734415/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_fka3gk.jpg",
+    alt: "Teens ministry gathering at Blooming Roses",
+  },
+  {
+    id: 15,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2022",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734411/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_4_re6rri.jpg",
+    alt: "Youth prayer session at Blooming Roses",
+  },
+  {
+    id: 16,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734410/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_6_fyxpmh.jpg",
+    alt: "Spiritual formation activities at Blooming Roses",
+  },
+  {
+    id: 17,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734409/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_7_ahqayd.jpg",
+    alt: "Teens participating in group activities",
+  },
+  {
+    id: 18,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734408/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_8_xawm0b.jpg",
+    alt: "Youth ministry event at Blooming Roses",
+  },
+  {
+    id: 19,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734407/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_9_z8hbhq.jpg",
+    alt: "Group photo of teens at Blooming Roses",
+  },
+  {
+    id: 20,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734405/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_10_bj6mkw.jpg",
+    alt: "Spiritual retreat activities at Blooming Roses",
+  },
+  {
+    id: 21,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2022",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734403/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_12_tbeuet.jpg",
+    alt: "Teens engaged in faith formation",
+  },
+  {
+    id: 22,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734401/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_14_q7tjlr.jpg",
+    alt: "Youth gathering at Blooming Roses event",
+  },
+  {
+    id: 23,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734397/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_16_dt65hq.jpg",
+    alt: "Teens ministry activities at Blooming Roses",
+  },
+  {
+    id: 24,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2024",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734398/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_15_tav9xp.jpg",
+    alt: "Group prayer session at Blooming Roses",
+  },
+  {
+    id: 25,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734404/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_11_ck7noz.jpg",
+    alt: "Teens participating in spiritual activities",
+  },
+  {
+    id: 26,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734402/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_13_zewccl.jpg",
+    alt: "Youth ministry event at Blooming Roses",
+  },
+  {
+    id: 27,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734397/Blooming_Roses_23_%EF%B8%8F_...._palkbz.jpg",
+    alt: "Group activities at Blooming Roses retreat",
+  },
+  {
+    id: 28,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734393/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_19_enmpqs.jpg",
+    alt: "Teens engaged in spiritual formation",
+  },
+  {
+    id: 29,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734394/Blooming_Roses_23_%EF%B8%8F_...._1_dyzxc7.jpg",
+    alt: "Youth prayer gathering at Blooming Roses",
+  },
+  {
+    id: 30,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734394/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_18_vawoti.jpg",
+    alt: "Teens ministry activities at Blooming Roses",
+  },
+  {
+    id: 31,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734392/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_21_aq0cyd.jpg",
+    alt: "Group photo of participants at Blooming Roses",
+  },
+  {
+    id: 32,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734393/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_17_licey5.jpg",
+    alt: "Spiritual activities at Blooming Roses retreat",
+  },
+  {
+    id: 33,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744734392/Blooming_Roses_23_%EF%B8%8F...._teens_teensministry_jesusyouthpala_jesusyouth_pala_20_quwxrr.jpg",
+    alt: "Teens engaged in group activities",
+  },
+  {
+    id: 34,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744733364/IMG_9387_zelgf4.jpg",
+    alt: "Youth gathering at Blooming Roses event",
+  },
+  {
+    id: 35,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744733350/IMG_9386_l8foyx.jpg",
+    alt: "Group prayer session at Blooming Roses",
+  },
+  {
+    id: 36,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744733279/Blooming_Roses_23_%EF%B8%8FInauguration...._teens_teensministry_jesusyouthpala_jesusyouth_pala_rhkoof.jpg",
+    alt: "Inauguration ceremony at Blooming Roses",
+  },
+  {
+    id: 37,
+    title: "Blooming Roses",
+    description: "Highlights of Blooming Roses 2023",
+    src: "https://res.cloudinary.com/dobqxxtml/image/upload/v1744718801/previous_blooming_nkakyy.jpg",
+    alt: "Group photo of participants at Blooming Roses",
+  }
 ]
 
 // Sample video gallery items - only needs videoUrl and description
@@ -171,19 +415,19 @@ export default function GalleryPage() {
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('photos')
-  
+
   // Check for tab query parameter on page load
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const tabParam = urlParams.get('tab');
-    
+
     if (tabParam === 'videos' || tabParam === 'photos') {
       setActiveTab(tabParam);
       // Update the URL without refreshing the page
       const newUrl = new URL(window.location.href);
       newUrl.searchParams.set('tab', tabParam);
       window.history.replaceState({}, '', newUrl);
-      
+
       // If videos tab is selected, scroll to the videos section
       if (tabParam === 'videos') {
         setTimeout(() => {
@@ -198,45 +442,45 @@ export default function GalleryPage() {
 
   const navigateImages = useCallback((direction: 'prev' | 'next') => {
     if (selectedImageIndex === null) return
-    
+
     const newIndex = direction === 'prev'
       ? (selectedImageIndex - 1 + imageGalleryItems.length) % imageGalleryItems.length
       : (selectedImageIndex + 1) % imageGalleryItems.length
-      
+
     setSelectedImageIndex(newIndex)
   }, [selectedImageIndex])
-  
+
   const navigateVideos = useCallback((direction: 'prev' | 'next') => {
     if (selectedVideoIndex === null) return
-    
+
     const newIndex = direction === 'prev'
       ? (selectedVideoIndex - 1 + videoGalleryItems.length) % videoGalleryItems.length
       : (selectedVideoIndex + 1) % videoGalleryItems.length
-      
+
     setSelectedVideoIndex(newIndex)
   }, [selectedVideoIndex])
-  
+
   const openImageDialog = (index: number) => {
     setSelectedImageIndex(index)
     setIsDialogOpen(true)
   }
-  
+
   const openVideoDialog = (index: number) => {
     setSelectedVideoIndex(index)
     setIsDialogOpen(true)
   }
-  
+
   const handleDialogClose = () => {
     setIsDialogOpen(false)
     setSelectedImageIndex(null)
     setSelectedVideoIndex(null)
   }
-  
+
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isDialogOpen) return
-      
+
       if (activeTab === 'photos' && selectedImageIndex !== null) {
         if (e.key === 'ArrowLeft') {
           navigateImages('prev')
@@ -259,12 +503,12 @@ export default function GalleryPage() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isDialogOpen, selectedImageIndex, selectedVideoIndex, activeTab, navigateImages, navigateVideos])
-  
+
   return (
     <div className="relative">
       {/* Background with soft gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-100 z-[-1]" />
-      
+
       <div className="relative py-12 md:py-16">
         <Container>
           {/* Page Header */}
@@ -276,14 +520,14 @@ export default function GalleryPage() {
               Moments captured during our spiritual journey together, reflecting the joy, community, and faith we share
             </p>
           </div>
-          
+
           {/* Tabs */}
           <div className="mb-8 flex justify-center border-b border-gray-200">
             <button
               onClick={() => setActiveTab('photos')}
               className={`px-6 py-3 text-sm font-medium transition-colors border-b-2 ${
-                activeTab === 'photos' 
-                  ? 'border-blue-800 text-blue-800' 
+                activeTab === 'photos'
+                  ? 'border-blue-800 text-blue-800'
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
             >
@@ -292,8 +536,8 @@ export default function GalleryPage() {
             <button
               onClick={() => setActiveTab('videos')}
               className={`px-6 py-3 text-sm font-medium transition-colors border-b-2 ${
-                activeTab === 'videos' 
-                  ? 'border-blue-800 text-blue-800' 
+                activeTab === 'videos'
+                  ? 'border-blue-800 text-blue-800'
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
               id="videos-tab"
@@ -301,7 +545,7 @@ export default function GalleryPage() {
               Videos
             </button>
           </div>
-          
+
           {/* Previous Blooming Roses heading - now moved above the videos grid */}
           {activeTab === 'videos' && (
             <div className="mb-8 text-center" id="videos">
@@ -311,7 +555,7 @@ export default function GalleryPage() {
               </p>
             </div>
           )}
-          
+
           {/* Photos Grid */}
           {activeTab === 'photos' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -344,7 +588,7 @@ export default function GalleryPage() {
               ))}
             </div>
           )}
-          
+
           {/* Videos Grid */}
           {activeTab === 'videos' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -358,7 +602,7 @@ export default function GalleryPage() {
                   <div className="relative aspect-video overflow-hidden">
                     {/* Video thumbnail */}
                     <div className="relative w-full h-full">
-                      <Image 
+                      <Image
                         src={item.thumbnailUrl}
                         alt={`Thumbnail for ${item.description}`}
                         fill
@@ -367,7 +611,7 @@ export default function GalleryPage() {
                         priority={index < 4} // Prioritize loading for first 4 images
                       />
                     </div>
-                    
+
                     {/* Play button overlay */}
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
@@ -384,10 +628,10 @@ export default function GalleryPage() {
           )}
         </Container>
       </div>
-      
+
       {/* Image Lightbox Dialog */}
       <Dialog open={isDialogOpen && selectedImageIndex !== null} onOpenChange={handleDialogClose}>
-        <DialogContent className="max-w-5xl p-0 bg-black/90 border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
+        <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
           {selectedImageIndex !== null && (
             <div className="relative w-full h-[80vh]">
               <Image
@@ -397,9 +641,9 @@ export default function GalleryPage() {
                 className="object-contain"
                 unoptimized={imageGalleryItems[selectedImageIndex].src.startsWith('https://')}
               />
-              
+
               {/* Navigation Arrows */}
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation()
                   navigateImages('prev')
@@ -411,8 +655,8 @@ export default function GalleryPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
               </button>
-              
-              <button 
+
+              <button
                 onClick={(e) => {
                   e.stopPropagation()
                   navigateImages('next')
@@ -424,14 +668,14 @@ export default function GalleryPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </button>
-              
+
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
                 <p className="text-sm text-gray-300">{imageGalleryItems[selectedImageIndex].description}</p>
               </div>
-              
+
               {/* Close Button */}
-              <button 
+              <button
                 onClick={handleDialogClose}
                 className="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors"
                 aria-label="Close"
@@ -444,14 +688,14 @@ export default function GalleryPage() {
           )}
         </DialogContent>
       </Dialog>
-      
+
       {/* Video Lightbox Dialog */}
       <Dialog open={isDialogOpen && selectedVideoIndex !== null} onOpenChange={handleDialogClose}>
         <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
           {selectedVideoIndex !== null && (
             <div className="relative flex items-center justify-center w-full max-h-[90vh] bg-black">
               {/* Video player using HTML5 video element */}
-              <video 
+              <video
                 src={videoGalleryItems[selectedVideoIndex].videoUrl}
                 className="max-w-full max-h-[80vh] object-contain"
                 controls
@@ -460,9 +704,9 @@ export default function GalleryPage() {
               >
                 Your browser does not support the video tag.
               </video>
-              
+
               {/* Navigation Arrows */}
-              <button 
+              <button
                 onClick={(e) => {
                   e.stopPropagation()
                   navigateVideos('prev')
@@ -474,8 +718,8 @@ export default function GalleryPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
               </button>
-              
-              <button 
+
+              <button
                 onClick={(e) => {
                   e.stopPropagation()
                   navigateVideos('next')
@@ -487,14 +731,14 @@ export default function GalleryPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </button>
-              
+
               {/* Video Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white z-10">
                 <p className="text-sm text-gray-300">{videoGalleryItems[selectedVideoIndex].description}</p>
               </div>
-              
+
               {/* Close Button */}
-              <button 
+              <button
                 onClick={handleDialogClose}
                 className="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors z-10"
                 aria-label="Close"
@@ -509,4 +753,4 @@ export default function GalleryPage() {
       </Dialog>
     </div>
   )
-} 
+}

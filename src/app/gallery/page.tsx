@@ -22,62 +22,7 @@ const imageGalleryItems = [
     src: "https://res.cloudinary.com/demo/image/upload/v1312461204/sample.jpg", // Example - replace with your URL
     alt: "Group of young people in a circle",
   },
-  {
-    id: 3,
-    title: "Group Prayer",
-    description: "Seeking God's presence together",
-    src: "/images/worship.jpg",
-    alt: "Group prayer with hands raised",
-  },
-  {
-    id: 4,
-    title: "Scripture Study",
-    description: "Diving deeper into God's word",
-    src: "/images/worship.jpg", 
-    alt: "Bible study session",
-  },
-  {
-    id: 5,
-    title: "Peaceful Reflection",
-    description: "Finding quiet moments to connect with God",
-    src: "/images/worship.jpg",
-    alt: "Person in quiet reflection with Bible",
-  },
-  {
-    id: 6,
-    title: "Fellowship Time",
-    description: "Building relationships that strengthen faith",
-    src: "/images/worship.jpg",
-    alt: "Friends sharing food and conversation",
-  },
-  {
-    id: 7,
-    title: "Praise and Worship",
-    description: "Expressing joy through music and song",
-    src: "/images/worship.jpg",
-    alt: "Praise and worship music session",
-  },
-  {
-    id: 8,
-    title: "Outdoor Gathering",
-    description: "Experiencing God's presence in nature",
-    src: "/images/worship.jpg",
-    alt: "Group gathered outdoors",
-  },
-  {
-    id: 9,
-    title: "Prayer Night",
-    description: "An evening of collective prayer and intercession",
-    src: "/images/worship.jpg",
-    alt: "Group prayer with hands raised",
-  },
-  {
-    id: 10,
-    title: "Scripture Study",
-    description: "Diving deeper into God's word",
-    src: "/images/worship.jpg",
-    alt: "Bible study session",
-  }
+  
 ]
 
 // Sample video gallery items - only needs videoUrl and description
@@ -110,7 +55,7 @@ const videoGalleryItems = [
   {
     id: 4,
     title: "Prayer Night",
-    description: "Prayer night from the 2024 Blooming Roses",
+    description: "Shots of the 2024 Blooming Roses",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/1st_day_highlights_-_24bloom_ioyeij.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/image/upload/c_fill,h_360,q_80,w_640/v1744695352/1st_day_highlights_-_24bloom_ioyeij.jpg",
     category: "prayer",

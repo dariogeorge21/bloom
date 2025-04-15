@@ -319,7 +319,7 @@ export default function Home() {
               <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 shadow-lg border border-purple-100">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
-                    <Image
+          <Image
                       src="/images/testimonies/angel.jpg" 
                       alt="Angel Rose" 
                       fill

@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { CountdownTimer } from "@/components/countdown-timer"
-import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -29,11 +28,11 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center space-y-10 text-center">
             <div className="space-y-4 animate-fade-in">
               <div className="relative w-64 h-64 mx-auto">
-                <Image 
+        <Image
                   src="/images/bloomingroses/logo.png" 
                   alt="Blooming Roses Logo" 
                   fill
-                  priority
+          priority
                   className="object-contain"
                 />
               </div>
@@ -49,7 +48,7 @@ export default function Home() {
               {/* Spiritual quote */}
               <div className="mt-4 mx-auto max-w-2xl">
                 <p className="italic text-gray-600 border-l-4 border-blue-200 pl-4 py-2 text-lg">
-                  "Rejoice in hope"
+                  &ldquo;Rejoice in hope&rdquo;
                   <span className="block text-sm mt-1 text-right">Romans 12:12</span>
                 </p>
               </div>
@@ -66,9 +65,9 @@ export default function Home() {
               <Link
                 href="https://bit.ly/blooming25Registration"
                 className="inline-flex h-12 items-center justify-center rounded-full bg-blue-800 px-8 text-base font-medium text-white shadow-lg transition-transform hover:bg-blue-700 hover:scale-105"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            target="_blank"
+            rel="noopener noreferrer"
+          >
                 Register Now
               </Link>
               <Link
@@ -101,7 +100,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-blue-100"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/70 z-10" />
-              <Image
+          <Image
                 src="https://res.cloudinary.com/dobqxxtml/video/upload/so_2.7/v1744695372/bloom_24_promo_onxbtt.jpg"
                 alt="Prayer session from previous Blooming Roses"
                 width={640}
@@ -140,7 +139,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl border border-pink-100"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-pink-900/70 to-purple-900/70 z-10" />
-              <Image
+          <Image
                 src="https://res.cloudinary.com/dobqxxtml/image/upload/v1744693380/previous_blooming_nkakyy.jpg"
                 alt="Photos from previous Blooming Roses"
                 width={640}
@@ -241,7 +240,7 @@ export default function Home() {
           <div className="mt-16 bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-8 shadow-lg border border-blue-100">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
-                <Image 
+          <Image
                   src="/images/about/ant.jpg" 
                   alt="Testimonial" 
                   fill
@@ -253,7 +252,7 @@ export default function Home() {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="text-lg text-gray-700 italic mb-4">
-                  "Blooming Roses was a turning point in my spiritual journey. The fellowship, prayer sessions, and guidance helped me develop a deeper relationship with Christ. I've made friends that will last a lifetime."
+                  &ldquo;Blooming Roses was a turning point in my spiritual journey. The fellowship, prayer sessions, and guidance helped me develop a deeper relationship with Christ. I&apos;ve made friends that will last a lifetime.&rdquo;
                 </p>
                 <p className="font-medium text-blue-800">Participant Name</p>
                 <p className="text-sm text-gray-500">Past Participant • Blooming Roses 23</p>

@@ -135,7 +135,7 @@ export function Chatbot() {
         <div className="absolute bottom-16 right-0 w-80 md:w-96 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden transition-all duration-300 animate-fade-in">
           <div className="bg-blue-800 text-white p-4">
             <h3 className="font-bold text-lg">Blooming Roses Help</h3>
-            <p className="text-sm text-blue-100">Ask me anything about the event!</p>
+            <p className="text-sm text-blue-100">Were these your questions?</p>
           </div>
 
           <div className="h-96 overflow-y-auto p-4">

@@ -94,7 +94,7 @@ const videoGalleryItems = [
     id: 2,
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
-    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp44",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp4",
     category: "testimonies",
   },
   {
@@ -129,9 +129,44 @@ const videoGalleryItems = [
     id: 7,
     title: "Testimonies of Faith",
     description: "Participants share their transformative experiences",
-    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695425/blooming_22_dqxhka.mp44",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695438/bloom_22_qsgt2p.mp4",
     category: "testimonies",
-  }
+  },
+  {
+    id: 8,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695415/23_bloom_summation_uvlawz.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 12,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695352/0th_day_highlights_-_24bloom_yfmjpi.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 13,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695409/24_bloom_promo_qcecfb.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 14,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695345/blloom_23_qesx6y.mp4",
+    category: "testimonies",
+  },
+  {
+    id: 15,
+    title: "Testimonies of Faith",
+    description: "Participants share their transformative experiences",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1744695372/bloom_24_promo_onxbtt.mp4",
+    category: "testimonies",
+  },
 ]
 
 export default function GalleryPage() {
@@ -382,13 +417,13 @@ export default function GalleryPage() {
       
       {/* Video Lightbox Dialog */}
       <Dialog open={isDialogOpen && selectedVideoIndex !== null} onOpenChange={handleDialogClose}>
-        <DialogContent className="max-w-5xl p-0 bg-black/90 border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
+        <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
           {selectedVideoIndex !== null && (
-            <div className="relative w-full h-[80vh]">
+            <div className="relative flex items-center justify-center w-full max-h-[90vh] bg-black">
               {/* Video player using HTML5 video element */}
               <video 
                 src={videoGalleryItems[selectedVideoIndex].videoUrl}
-                className="absolute inset-0 w-full h-full"
+                className="max-w-full max-h-[80vh] object-contain"
                 controls
                 autoPlay
                 playsInline
@@ -424,7 +459,7 @@ export default function GalleryPage() {
               </button>
               
               {/* Video Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white z-10">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white z-10">
                 <p className="text-sm text-gray-300">{videoGalleryItems[selectedVideoIndex].description}</p>
               </div>
               

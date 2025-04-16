@@ -339,7 +339,7 @@ export default function Home() {
                     <p className="text-gray-700 italic mb-3 text-sm">
                       &ldquo;{language === 'en' ? 'Amidst \'Blooming roses\', my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.' : '\'ബ്ലൂമിംഗ് റോസസ്\' മധ്യേ, എന്റെ ആത്മാവ് അതിന്റെ പാത കണ്ടെത്തി, അത് എന്റെ ജീവിതത്തിലെ നിർണായക വഴിത്തിരിവുകൾക്കുള്ള വേദിയായിരുന്നു! ആരാധന, കുമ്പസാരം തുടങ്ങിയവയിലൂടെ എനിക്കുണ്ടായ അനുഭവം ഈശോപ്പയോടൊപ്പം നടക്കാൻ എന്നെ പ്രാപ്തമാക്കി.'}&rdquo;
                     </p>
-                    <p className="font-medium text-purple-800">Angel Rose</p>
+                    <p className="font-medium text-purple-800">Angel Rose Babu</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>
                   </div>
                 </div>

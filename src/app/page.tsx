@@ -321,7 +321,7 @@ export default function Home() {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0">
           <Image
                       src="/images/testimonies/angel.jpg"
-                      alt="Angel Rose"
+                      alt="Angel Rose Babu"
                       fill
                       className="object-cover"
                       unoptimized

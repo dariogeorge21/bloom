@@ -334,7 +334,7 @@ export default function Home() {
                     <p className="text-gray-700 italic mb-3 text-sm">
                       &ldquo;Amidst &apos;Blooming roses&apos;, my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.&rdquo;
                     </p>
-                    <p className="font-medium text-purple-800">Angel Rose</p>
+                    <p className="font-medium text-purple-800">Angel Rose Babu</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>
                   </div>
                 </div>

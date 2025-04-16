@@ -40,16 +40,16 @@ export function FloatingLanguageToggle() {
         onClick={handleToggle}
         className={`
           flex items-center justify-center
-          px-4 py-2
+          px-3 py-1.5
           rounded-full
           bg-white/30 backdrop-blur-md
           text-blue-800
-          text-sm font-medium
+          text-xs font-medium
           transition-all duration-300
           border border-blue-200/50
-          shadow-lg
+          shadow-sm
           hover:bg-white/40
-          hover:shadow-xl
+          hover:shadow-md
           ${isButtonAnimating || isChangingLanguage ? 'pointer-events-none' : ''}
         `}
         aria-label={`Switch to ${language === 'en' ? 'Malayalam' : 'English'}`}
@@ -63,7 +63,7 @@ export function FloatingLanguageToggle() {
         >
           {language === 'en' ? 'മലയാളം' : 'English'}
           {!isButtonAnimating && (
-            <span className="ml-1 opacity-70">✓</span>
+            <span className="ml-0.5 opacity-70 text-xs">✓</span>
           )}
         </span>
       </button>

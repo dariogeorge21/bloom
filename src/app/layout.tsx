@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { Chatbot } from "@/components/chatbot";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LanguageHtmlAttributes } from "@/components/language-html-attributes";
+import { FloatingLanguageToggle } from "@/components/floating-language-toggle";
 
 export const metadata: Metadata = {
   title: "Blooming Roses | Jesus Youth Pala",
@@ -29,6 +30,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <Chatbot />
+            <FloatingLanguageToggle />
           </div>
         </LanguageProvider>
       </body>

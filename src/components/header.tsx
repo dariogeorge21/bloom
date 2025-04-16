@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { LanguageToggle } from "./language-toggle"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { getTranslation } from "@/lib/translations"
 
@@ -54,7 +53,6 @@ export function Header() {
                 {getTranslation('common', 'register', language)}
               </Link>
             </nav>
-            <LanguageToggle />
           </div>
         </div>
       </div>

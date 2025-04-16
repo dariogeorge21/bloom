@@ -5,8 +5,11 @@ import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Button } from "@/components/ui/button"
 import { useEffect } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslation } from "@/lib/translations"
 
 export default function AboutPage() {
+  const { language } = useLanguage();
   // Add effect to handle hash navigation
   useEffect(() => {
     // Check if there's a hash in the URL
@@ -54,15 +57,15 @@ export default function AboutPage() {
                 </span>
               </h2> */}
               <p className="text-xl text-blue-800 animate-slide-up font-medium">
-                April 24–27 at Tabore Kodumpidi, Pala
+                {getTranslation('home', 'eventDate', language)}
               </p>
 
               <div className="mt-8 mx-auto max-w-2xl rounded-2xl border border-pink-100 bg-white p-6 shadow-lg">
                 <p className="text-lg font-medium mb-4">
-                  Hey Teens! 🎉
+                  {language === 'en' ? 'Hey Teens! 🎉' : 'ഹേയ് ടീൻസ്! 🎉'}
                 </p>
                 <p className="text-gray-700">
-                  Get ready for Blooming Roses 25, an exciting and life-changing event just for YOU! Join us from April 24th to April 27th at Tabore Kodumpidi, Pala, for four days filled with fellowship and faith!
+                  {language === 'en' ? 'Get ready for Blooming Roses 25, an exciting and life-changing event just for YOU! Join us from April 24th to April 27th at Tabore Kodumpidi, Pala, for four days filled with fellowship and faith!' : 'ബ്ലൂമിംഗ് റോസസ് 25-ന് തയ്യാറാകൂ, നിങ്ങൾക്കായി മാത്രമുള്ള ഒരു രസകരവും ജീവിതം മാറ്റുന്നതുമായ ഇവന്റ്! ഏപ്രിൽ 24 മുതൽ 27 വരെ താബോർ കൊടുമ്പിടി, പാലയിൽ കൂട്ടായ്മയും വിശ്വാസവും നിറഞ്ഞ നാല് ദിവസങ്ങളിലേക്ക് ഞങ്ങളോടൊപ്പം ചേരുക!'}
                 </p>
               </div>
             </div>
@@ -70,28 +73,28 @@ export default function AboutPage() {
             {/* Key Highlights */}
             <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <h2 className="text-2xl font-bold text-center mb-8">
-                <span className="text-blue-800">🔥 Why You Can&apos;t Miss This! 🔥</span>
+                <span className="text-blue-800">{getTranslation('home', 'highlightsTitle', language)}</span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 p-6 shadow-sm border border-blue-200">
-                  <p className="text-lg font-medium text-blue-800 mb-2">✨ Inspiring Sessions & Talks</p>
-                  <p className="text-gray-700">Be inspired through powerful talks and interactive sessions designed just for teens.</p>
+                  <p className="text-lg font-medium text-blue-800 mb-2">{getTranslation('home', 'inspiringSessions', language)}</p>
+                  <p className="text-gray-700">{getTranslation('home', 'inspiringSessionsDesc', language)}</p>
                 </div>
 
                 <div className="rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 p-6 shadow-sm border border-pink-200">
-                  <p className="text-lg font-medium text-pink-800 mb-2">✨ Fellowship & Unforgettable Memories</p>
-                  <p className="text-gray-700">Make new friends and create lasting memories with other teens on the same journey.</p>
+                  <p className="text-lg font-medium text-pink-800 mb-2">{getTranslation('home', 'fellowship', language)}</p>
+                  <p className="text-gray-700">{getTranslation('home', 'fellowshipDesc', language)}</p>
                 </div>
 
                 <div className="rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 p-6 shadow-sm border border-purple-200">
-                  <p className="text-lg font-medium text-purple-800 mb-2">✨ Encounter with Jesus</p>
-                  <p className="text-gray-700">Experience a personal encounter with Christ that can transform your life.</p>
+                  <p className="text-lg font-medium text-purple-800 mb-2">{getTranslation('home', 'encounter', language)}</p>
+                  <p className="text-gray-700">{getTranslation('home', 'encounterDesc', language)}</p>
                 </div>
 
                 <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 shadow-sm border border-indigo-200">
-                  <p className="text-lg font-medium text-indigo-800 mb-2">✨ Adoration & Sacramental Life</p>
-                  <p className="text-gray-700">Deepen your faith through adoration, prayer, and the sacraments in a supportive community.</p>
+                  <p className="text-lg font-medium text-indigo-800 mb-2">{getTranslation('home', 'adoration', language)}</p>
+                  <p className="text-gray-700">{getTranslation('home', 'adorationDesc', language)}</p>
                 </div>
               </div>
             </div>
@@ -99,25 +102,25 @@ export default function AboutPage() {
             {/* Event Details */}
             <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.4s" }}>
               <div className="p-8 rounded-2xl bg-white shadow-md border border-gray-100">
-                <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">Event Details</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-4 text-center">{getTranslation('about', 'eventDetails', language)}</h3>
                 <div className="max-w-md mx-auto">
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-3 mt-1">📍</span>
                       <div>
-                        <span className="font-medium">Location:</span> Tabore Kodumpidi, Pala
+                        <span className="font-medium">{getTranslation('about', 'location', language)}</span> {getTranslation('about', 'locationValue', language)}
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-3 mt-1">📅</span>
                       <div>
-                        <span className="font-medium">Dates:</span> April 24-27, 2025
+                        <span className="font-medium">{getTranslation('about', 'dates', language)}</span> {getTranslation('about', 'datesValue', language)}
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-600 mr-3 mt-1">💰</span>
                       <div>
-                        <span className="font-medium">Registration Fee:</span> ₹800
+                        <span className="font-medium">{getTranslation('about', 'registrationFee', language)}</span> {getTranslation('about', 'registrationFeeValue', language)}
                       </div>
                     </li>
                   </ul>
@@ -128,9 +131,9 @@ export default function AboutPage() {
             {/* Program Outline */}
             <div className="space-y-6 animate-slide-up" style={{ animationDelay: "0.45s" }}>
               <div className="p-8 rounded-2xl bg-gradient-to-br from-white to-blue-50 shadow-md border border-blue-100">
-                <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">Program Outline</h3>
+                <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">{getTranslation('about', 'programOutline', language)}</h3>
                 <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-                  Experience a transformative journey of faith through our carefully crafted program designed to nurture your spiritual growth and deepen your relationship with Christ.
+                  {getTranslation('about', 'programOutlineDesc', language)}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -272,7 +275,7 @@ export default function AboutPage() {
             {/* Meet the Organizers Section */}
             <div className="animate-slide-up" style={{ animationDelay: "0.5s" }}>
               <h2 className="text-2xl font-bold text-center mb-8">
-                <span className="text-blue-800">📞 Contact Our Team</span>
+                <span className="text-blue-800">{getTranslation('about', 'contactTeam', language)}</span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -348,7 +351,7 @@ export default function AboutPage() {
             {/* Location Map Section */}
             <div className="animate-slide-up" style={{ animationDelay: "0.6s" }} id="location">
               <h2 className="text-2xl font-bold text-center mb-6">
-                <span className="text-blue-800">📍 Event Location</span>
+                <span className="text-blue-800">{getTranslation('about', 'eventLocation', language)}</span>
               </h2>
 
               <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
@@ -375,17 +378,17 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  Get Directions
+                  {getTranslation('about', 'getDirections', language)}
                 </a>
               </div>
             </div>
 
             {/* Registration Section */}
             <div className="text-center space-y-6 animate-slide-up" style={{ animationDelay: "0.7s" }}>
-              <h3 className="text-2xl font-bold text-blue-800">Ready to Join Us?</h3>
+              <h3 className="text-2xl font-bold text-blue-800">{getTranslation('about', 'readyToJoin', language)}</h3>
               <p className="text-lg text-gray-700">
-                Scan the QR code and register now! 📲<br/>
-                Or use the link below to register
+                {getTranslation('about', 'scanQR', language)}<br/>
+                {getTranslation('about', 'orUseLink', language)}
               </p>
 
               <div className="flex flex-col items-center justify-center space-y-6">
@@ -407,7 +410,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-blue-800 hover:bg-blue-700 text-white px-8 py-6 rounded-full text-lg shadow-lg transition-all hover:shadow-xl">
-                    Register Now
+                    {getTranslation('about', 'registerNow', language)}
                   </Button>
                 </Link>
               </div>
@@ -416,10 +419,10 @@ export default function AboutPage() {
             {/* Closing Message */}
             <div className="text-center mt-12 animate-slide-up" style={{ animationDelay: "0.8s" }}>
               <p className="text-xl font-medium text-blue-800">
-                Come, let&apos;s grow in faith and fellowship together! 💖
+                {getTranslation('about', 'closingMessage', language)}
               </p>
               <p className="text-lg font-bold mt-2 text-pink-600">
-                Jesus Youth Pala
+                {getTranslation('about', 'organizer', language)}
               </p>
             </div>
           </div>

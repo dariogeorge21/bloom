@@ -1,8 +1,13 @@
+'use client';
+
 import Link from "next/link"
 import Image from "next/image"
 import { CountdownTimer } from "@/components/countdown-timer"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslation } from "@/lib/translations"
 
 export default function Home() {
+  const { language } = useLanguage();
   return (
     <div className="relative overflow-hidden">
       {/* Enhanced background with spiritual theme */}
@@ -37,26 +42,26 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-blue-800">
-                Blooming Roses <span className="text-pink-600">2K25</span>
+                {getTranslation('home', 'title', language)} <span className="text-pink-600">2K25</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-lg text-gray-600 md:text-xl">
-                A spiritual journey for teens organized by Jesus Youth Pala  <br />
+                {getTranslation('home', 'subtitle', language)}  <br />
                 <br />
-                <span className="font-medium text-blue-700">April 24–27, 2025 • Tabore Kodumpidi, Pala</span>
+                <span className="font-medium text-blue-700">{getTranslation('home', 'eventDate', language)}</span>
               </p><br />
 
               {/* Spiritual quote */}
               <div className="mt-4 mx-auto max-w-2xl">
                 <p className="italic text-gray-600 border-l-4 border-blue-200 pl-4 py-2 text-lg">
-                  &ldquo;Rejoice in hope&rdquo;
-                  <span className="block text-sm mt-1 text-right">Romans 12:12</span>
+                  &ldquo;{getTranslation('home', 'quote', language)}&rdquo;
+                  <span className="block text-sm mt-1 text-right">{getTranslation('home', 'quoteReference', language)}</span>
                 </p>
               </div>
             </div>
 
             {/* Countdown Timer */}
             <div className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
-              <p className="text-xl font-medium mb-4 text-blue-800">Your Spiritual Journey Begins In:</p>
+              <p className="text-xl font-medium mb-4 text-blue-800">{getTranslation('home', 'countdownTitle', language)}</p>
               <CountdownTimer />
             </div>
 
@@ -68,7 +73,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-                Register Now
+                {getTranslation('common', 'register', language)}
               </Link>
               <Link
                 href="/about#location"
@@ -78,7 +83,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Get Directions
+                {getTranslation('home', 'getDirections', language)}
               </Link>
             </div>
           </div>
@@ -88,9 +93,9 @@ export default function Home() {
       {/* Video & Photo Highlight Cards */}
       <section className="py-12 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-800">Glimpses of Faith & Fellowship</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-800">{language === 'en' ? 'Glimpses of Faith & Fellowship' : 'വിശ്വാസത്തിന്റെയും കൂട്ടായ്മയുടെയും നിമിഷങ്ങൾ'}</h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            Experience the joy and transformation of past Blooming Roses events through our collection of cherished memories
+            {language === 'en' ? 'Experience the joy and transformation of past Blooming Roses events through our collection of cherished memories' : 'ഞങ്ങളുടെ ചെറുശേഖരത്തിലൂടെ മുൻ ബ്ലൂമിംഗ് റോസസ് ഇവന്റുകളുടെ സന്തോഷവും പരിവർത്തനവും അനുഭവിക്കുക'}
           </p>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -117,15 +122,15 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider opacity-75">WATCH NOW</p>
-                    <h3 className="text-xl font-bold">Previous Blooming Roses</h3>
+                    <p className="text-xs uppercase tracking-wider opacity-75">{language === 'en' ? 'WATCH NOW' : 'ഇപ്പോൾ കാണുക'}</p>
+                    <h3 className="text-xl font-bold">{language === 'en' ? 'Previous Blooming Roses' : 'മുൻ ബ്ലൂമിംഗ് റോസസ്'}</h3>
                   </div>
                 </div>
                 <p className="mb-4 opacity-85">
-                  See the beautiful moments and transformations from our past events
+                  {language === 'en' ? 'See the beautiful moments and transformations from our past events' : 'ഞങ്ങളുടെ മുൻ ഇവന്റുകളിൽ നിന്നുള്ള മനോഹരമായ നിമിഷങ്ങളും പരിവർത്തനങ്ങളും കാണുക'}
                 </p>
                 <span className="inline-flex items-center font-medium text-white/90 group-hover:underline">
-                  View All Videos
+                  {language === 'en' ? 'View All Videos' : 'എല്ലാ വീഡിയോകളും കാണുക'}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -155,15 +160,15 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider opacity-75">BROWSE GALLERY</p>
-                    <h3 className="text-xl font-bold">Photo Memories</h3>
+                    <p className="text-xs uppercase tracking-wider opacity-75">{language === 'en' ? 'BROWSE GALLERY' : 'ഗാലറി ബ്രൗസ് ചെയ്യുക'}</p>
+                    <h3 className="text-xl font-bold">{language === 'en' ? 'Photo Memories' : 'ഫോട്ടോ ഓർമ്മകൾ'}</h3>
                   </div>
                 </div>
                 <p className="mb-4 opacity-85">
-                  Explore our collection of moments capturing joy, friendship and spiritual growth
+                  {language === 'en' ? 'Explore our collection of moments capturing joy, friendship and spiritual growth' : 'സന്തോഷം, സൗഹൃദം, ആത്മീയ വളർച്ച എന്നിവ പകർത്തുന്ന നിമിഷങ്ങളുടെ ഞങ്ങളുടെ ശേഖരം പര്യവേക്ഷണം ചെയ്യുക'}
                 </p>
                 <span className="inline-flex items-center font-medium text-white/90 group-hover:underline">
-                  View All Photos
+                  {language === 'en' ? 'View All Photos' : 'എല്ലാ ഫോട്ടോകളും കാണുക'}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -192,9 +197,9 @@ export default function Home() {
 
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Why Blooming Roses is Life-Changing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">{language === 'en' ? 'Why Blooming Roses is Life-Changing' : 'എന്തുകൊണ്ട് ബ്ലൂമിംഗ് റോസസ് ജീവിതം മാറ്റുന്നു'}</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Discover the unique aspects of our event that create lasting spiritual impact and personal transformation
+              {language === 'en' ? 'Discover the unique aspects of our event that create lasting spiritual impact and personal transformation' : 'സ്ഥായിയായ ആത്മീയ സ്വാധീനവും വ്യക്തിപരമായ പരിവർത്തനവും സൃഷ്ടിക്കുന്ന ഞങ്ങളുടെ ഇവന്റിന്റെ അനന്യമായ വശങ്ങൾ കണ്ടെത്തുക'}
             </p>
           </div>
 
@@ -205,9 +210,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-bold text-blue-800">Spiritual Growth</h3>
+              <h3 className="mb-3 text-xl font-bold text-blue-800">{language === 'en' ? 'Spiritual Growth' : 'ആത്മീയ വളർച്ച'}</h3>
               <p className="text-gray-600">
-                Deepen your relationship with God through inspiring sessions, adoration, and a vibrant prayer life.
+                {language === 'en' ? 'Deepen your relationship with God through inspiring sessions, adoration, and a vibrant prayer life.' : 'പ്രചോദനാത്മകമായ സെഷനുകൾ, ആരാധന, സജീവമായ പ്രാർത്ഥനാ ജീവിതം എന്നിവയിലൂടെ ദൈവവുമായുള്ള നിങ്ങളുടെ ബന്ധം ആഴപ്പെടുത്തുക.'}
               </p>
             </div>
 
@@ -217,9 +222,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-bold text-pink-700">Community</h3>
+              <h3 className="mb-3 text-xl font-bold text-pink-700">{language === 'en' ? 'Community' : 'കൂട്ടായ്മ'}</h3>
               <p className="text-gray-600">
-                Form meaningful connections with peers who share your values and faith journey.
+                {language === 'en' ? 'Form meaningful connections with peers who share your values and faith journey.' : 'നിങ്ങളുടെ മൂല്യങ്ങളും വിശ്വാസ യാത്രയും പങ്കിടുന്ന സഹപാഠികളുമായി അർത്ഥവത്തായ ബന്ധങ്ങൾ രൂപപ്പെടുത്തുക.'}
               </p>
             </div>
 
@@ -229,16 +234,16 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-bold text-purple-700">Transformation</h3>
+              <h3 className="mb-3 text-xl font-bold text-purple-700">{language === 'en' ? 'Transformation' : 'പരിവർത്തനം'}</h3>
               <p className="text-gray-600">
-                Experience lasting personal growth through encounters with Christ that will change your life.
+                {language === 'en' ? 'Experience lasting personal growth through encounters with Christ that will change your life.' : 'നിങ്ങളുടെ ജീവിതം മാറ്റുന്ന ക്രിസ്തുവുമായുള്ള കൂടിക്കാഴ്ചകളിലൂടെ സ്ഥായിയായ വ്യക്തിപരമായ വളർച്ച അനുഭവിക്കുക.'}
               </p>
             </div>
           </div>
 
           {/* Testimonial Section */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center text-blue-800 mb-8">What Participants Say</h3>
+            <h3 className="text-2xl font-bold text-center text-blue-800 mb-8">{getTranslation('home', 'testimonialTitle', language)}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Testimonial 1 - Ann */}
               <div className="bg-gradient-to-r from-blue-50 to-pink-50 rounded-2xl p-6 shadow-lg border border-blue-100">
@@ -351,7 +356,7 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
               </svg>
-              Learn More About The Event
+              {language === 'en' ? 'Learn More About The Event' : 'ഇവന്റിനെക്കുറിച്ച് കൂടുതൽ അറിയുക'}
             </Link>
           </div>
         </div>

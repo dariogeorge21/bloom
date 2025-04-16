@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { useLanguage } from "@/contexts/LanguageContext"
+import { getTranslation } from "@/lib/translations"
 
 // Sample gallery items - Replace these with your Cloudinary URLs
 const imageGalleryItems = [
@@ -403,6 +405,7 @@ const videoGalleryItems = [
 ]
 
 export default function GalleryPage() {
+  const { language } = useLanguage();
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -506,10 +509,10 @@ export default function GalleryPage() {
           {/* Page Header */}
           <div className="mb-12 text-center">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4 animate-fade-in">
-              <span className="text-blue-800">Gallery</span>
+              <span className="text-blue-800">{getTranslation('gallery', 'title', language)}</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-gray-600 animate-slide-up">
-              Moments captured during our spiritual journey together, reflecting the joy, community, and faith we share
+              {getTranslation('gallery', 'subtitle', language)}
             </p>
           </div>
 
@@ -523,7 +526,7 @@ export default function GalleryPage() {
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
             >
-              Photos
+              {getTranslation('gallery', 'photos', language)}
             </button>
             <button
               onClick={() => setActiveTab('videos')}
@@ -534,16 +537,16 @@ export default function GalleryPage() {
               }`}
               id="videos-tab"
             >
-              Videos
+              {getTranslation('gallery', 'videos', language)}
             </button>
           </div>
 
           {/* Previous Blooming Roses heading - now moved above the videos grid */}
           {activeTab === 'videos' && (
             <div className="mb-8 text-center" id="videos">
-              <h2 className="text-2xl font-bold text-blue-800 mb-4">Previous Blooming Roses</h2>
+              <h2 className="text-2xl font-bold text-blue-800 mb-4">{language === 'en' ? 'Previous Blooming Roses' : 'മുൻ ബ്ലൂമിംഗ് റോസസ്'}</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Click & watch highlights from our past events and relive the beautiful moments
+                {language === 'en' ? 'Click & watch highlights from our past events and relive the beautiful moments' : 'ഞങ്ങളുടെ മുൻ ഇവന്റുകളിൽ നിന്നുള്ള ഹൈലൈറ്റുകൾ ക്ലിക്ക് ചെയ്ത് കാണുക, മനോഹരമായ നിമിഷങ്ങൾ വീണ്ടും അനുഭവിക്കുക'}
               </p>
             </div>
           )}
@@ -569,12 +572,12 @@ export default function GalleryPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
-                        <p className="font-medium">{item.description}</p>
+                        <p className="font-medium">{language === 'en' ? item.description : item.description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
                       </div>
                     </div>
                   </div>
                   <div className="p-4">
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                    <p className="text-sm text-gray-600">{language === 'en' ? item.description : item.description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
                   </div>
                 </div>
               ))}
@@ -612,7 +615,7 @@ export default function GalleryPage() {
                     </div>
                   </div>
                   <div className="p-4">
-                    <p className="text-sm text-gray-600">{item.description}</p>
+                    <p className="text-sm text-gray-600">{language === 'en' ? item.description : item.description.replace('Highlights from', 'ഹൈലൈറ്റുകൾ').replace('Promo video for', 'പ്രമോ വീഡിയോ')}</p>
                   </div>
                 </div>
               ))}
@@ -663,7 +666,7 @@ export default function GalleryPage() {
 
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                <p className="text-sm text-gray-300">{imageGalleryItems[selectedImageIndex].description}</p>
+                <p className="text-sm text-gray-300">{language === 'en' ? imageGalleryItems[selectedImageIndex].description : imageGalleryItems[selectedImageIndex].description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
               </div>
 
               {/* Close Button */}
@@ -726,7 +729,7 @@ export default function GalleryPage() {
 
               {/* Video Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white z-10">
-                <p className="text-sm text-gray-300">{videoGalleryItems[selectedVideoIndex].description}</p>
+                <p className="text-sm text-gray-300">{language === 'en' ? videoGalleryItems[selectedVideoIndex].description : videoGalleryItems[selectedVideoIndex].description.replace('Highlights from', 'ഹൈലൈറ്റുകൾ').replace('Promo video for', 'പ്രമോ വീഡിയോ')}</p>
               </div>
 
               {/* Close Button */}

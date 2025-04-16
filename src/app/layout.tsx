@@ -3,6 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Chatbot } from "@/components/chatbot";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LanguageHtmlAttributes } from "@/components/language-html-attributes";
 
 export const metadata: Metadata = {
   title: "Blooming Roses | Jesus Youth Pala",
@@ -20,12 +22,15 @@ export default function RootLayout({
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <Chatbot />
-        </div>
+        <LanguageProvider>
+          <LanguageHtmlAttributes />
+          <div className="relative flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <Chatbot />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

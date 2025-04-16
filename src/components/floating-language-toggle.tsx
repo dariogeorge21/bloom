@@ -4,8 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 
 export function FloatingLanguageToggle() {
-  const { language, toggleLanguage } = useLanguage();
-  const [isAnimating, setIsAnimating] = useState(false);
+  const { language, toggleLanguage, isChangingLanguage } = useLanguage();
+  const [isButtonAnimating, setIsButtonAnimating] = useState(false);
 
   // Add keyboard shortcut (Ctrl+L) for toggling language
   useEffect(() => {
@@ -23,13 +23,15 @@ export function FloatingLanguageToggle() {
   }, [toggleLanguage]);
 
   const handleToggle = () => {
-    setIsAnimating(true);
+    if (isChangingLanguage) return; // Prevent multiple clicks during animation
+
+    setIsButtonAnimating(true);
+    toggleLanguage();
+
+    // Reset button animation after the full transition completes
     setTimeout(() => {
-      toggleLanguage();
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 1500); // Match the animation duration
-    }, 150);
+      setIsButtonAnimating(false);
+    }, 2500);
   };
 
   return (
@@ -48,19 +50,19 @@ export function FloatingLanguageToggle() {
           shadow-lg
           hover:bg-white/40
           hover:shadow-xl
-          ${isAnimating ? 'pointer-events-none' : ''}
+          ${isButtonAnimating || isChangingLanguage ? 'pointer-events-none' : ''}
         `}
         aria-label={`Switch to ${language === 'en' ? 'Malayalam' : 'English'}`}
-        disabled={isAnimating}
+        disabled={isButtonAnimating || isChangingLanguage}
       >
         <span
           className={`
             relative
-            ${isAnimating ? 'language-fade-animation' : ''}
+            ${isButtonAnimating ? 'language-fade-animation' : ''}
           `}
         >
           {language === 'en' ? 'മലയാളം' : 'English'}
-          {!isAnimating && (
+          {!isButtonAnimating && (
             <span className="ml-1 opacity-70">✓</span>
           )}
         </span>

@@ -53,7 +53,7 @@ const translations = {
     },
     quoteReference: {
       en: 'Romans 12:12',
-      ml: 'റോമർ 12:12',
+      ml: 'റോമാ 12:12',
     },
     countdownTitle: {
       en: 'Your Spiritual Journey Begins In:',
@@ -219,10 +219,10 @@ export function getTranslation(
   language: Language
 ): string {
   try {
-    // @ts-ignore - We're using dynamic access here
+    // ts-expect-error - We're using dynamic access here
     const translation = translations[category][key][language];
     return translation || `Missing translation: ${category}.${key}.${language}`;
-  } catch (error) {
+  } catch {
     console.error(`Translation not found for ${category}.${key}.${language}`);
     return `Missing translation: ${category}.${key}.${language}`;
   }

@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Language } from '@/contexts/LanguageContext';
 
 // Define the questions and answers for both languages
 export const faqData = {

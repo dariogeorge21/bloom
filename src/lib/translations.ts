@@ -255,7 +255,7 @@ export function getTranslation(
 ): string {
   try {
     return translations[category][key][language];
-  } catch (error) {
+  } catch {
     console.error(`Translation missing for ${category}.${key}.${language}`);
     // Fallback to English if translation is missing
     return translations[category][key]?.en || key;

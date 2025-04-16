@@ -2,11 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useLanguage } from "@/contexts/LanguageContext"
-import { getTranslation } from "@/lib/translations"
 
 export function Header() {
-  const { language } = useLanguage();
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-white backdrop-blur">
@@ -30,19 +27,19 @@ export function Header() {
                 href="/"
                 className="transition-colors hover:text-gray-600"
               >
-                {getTranslation('common', 'home', language)}
+                Home
               </Link>
               <Link
                 href="/about"
                 className="transition-colors hover:text-gray-600"
               >
-                {getTranslation('common', 'about', language)}
+                About
               </Link>
               <Link
                 href="/gallery"
                 className="transition-colors hover:text-gray-600"
               >
-                {getTranslation('common', 'gallery', language)}
+                Gallery
               </Link>
               <Link
                 href="https://bit.ly/blooming25Registration"
@@ -50,7 +47,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {getTranslation('common', 'register', language)}
+                Register Now
               </Link>
             </nav>
           </div>

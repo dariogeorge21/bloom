@@ -64,7 +64,7 @@ export const translations: TranslationCategories = {
     },
     quote: {
       en: 'Rejoice in hope',
-      ml: 'പ്രത്യാശയിൽ ആനന്ദിക്കുക',
+      ml: 'പ്രത്യാശയില്‍ സന്തോഷിക്കുവിന്‍',
     },
     quoteReference: {
       en: 'Romans 12:12',

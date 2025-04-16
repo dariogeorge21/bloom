@@ -56,11 +56,11 @@ export const translations: TranslationCategories = {
     },
     subtitle: {
       en: 'A spiritual journey for teens organized by Jesus Youth Pala',
-      ml: 'ജീസസ് യൂത്ത് പാല സംഘടിപ്പിക്കുന്ന കൗമാരക്കാർക്കായുള്ള ആത്മീയ യാത്ര',
+      ml: 'ജീസസ് യൂത്ത് പാലാ സംഘടിപ്പിക്കുന്ന കൗമാരക്കാർക്കായുള്ള ആത്മീയ യാത്ര',
     },
     eventDate: {
       en: 'April 24–27, 2025 • Tabore Kodumpidi, Pala',
-      ml: 'ഏപ്രിൽ 24–27, 2025 • താബോർ കൊടുമ്പിടി, പാല',
+      ml: 'ഏപ്രിൽ 24–27, 2025 • താബോർ കൊടുമ്പിടി, പാലാ',
     },
     quote: {
       en: 'Rejoice in hope',
@@ -68,7 +68,7 @@ export const translations: TranslationCategories = {
     },
     quoteReference: {
       en: 'Romans 12:12',
-      ml: 'റോമർ 12:12',
+      ml: 'റോമാ 12:12',
     },
     countdownTitle: {
       en: 'Your Spiritual Journey Begins In:',
@@ -150,7 +150,7 @@ export const translations: TranslationCategories = {
     },
     locationValue: {
       en: 'Tabore Kodumpidi, Pala',
-      ml: 'താബോർ കൊടുമ്പിടി, പാല',
+      ml: 'താബോർ കൊടുമ്പിടി, പാലാ',
     },
     dates: {
       en: 'Dates:',
@@ -210,7 +210,7 @@ export const translations: TranslationCategories = {
     },
     organizer: {
       en: 'Jesus Youth Pala',
-      ml: 'ജീസസ് യൂത്ത് പാല',
+      ml: 'ജീസസ് യൂത്ത് പാലാ',
     },
   },
   gallery: {
@@ -242,7 +242,7 @@ export const translations: TranslationCategories = {
     },
     organizedBy: {
       en: 'Organized by Jesus Youth Pala.',
-      ml: 'ജീസസ് യൂത്ത് പാല സംഘടിപ്പിക്കുന്നു.',
+      ml: 'ജീസസ് യൂത്ത് പാലാ സംഘടിപ്പിക്കുന്നു.',
     },
   },
 };

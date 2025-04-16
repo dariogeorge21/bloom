@@ -9,6 +9,18 @@ const translations = {
       en: 'English',
       ml: 'മലയാളം',
     },
+    home: {
+      en: 'Home',
+      ml: 'ഹോം',
+    },
+    about: {
+      en: 'About',
+      ml: 'കുറിച്ച്',
+    },
+    gallery: {
+      en: 'Gallery',
+      ml: 'ഗാലറി',
+    },
     register: {
       en: 'Register Now',
       ml: 'ഇപ്പോൾ രജിസ്റ്റർ ചെയ്യുക',
@@ -29,11 +41,11 @@ const translations = {
     },
     subtitle: {
       en: 'A spiritual journey for teens organized by Jesus Youth Pala',
-      ml: 'ജീസസ് യൂത്ത് പാല സംഘടിപ്പിക്കുന്ന കൗമാരക്കാർക്കായുള്ള ആത്മീയ യാത്ര',
+      ml: 'ജീസസ് യൂത്ത് പാലാ സംഘടിപ്പിക്കുന്ന കൗമാരക്കാർക്കായുള്ള ആത്മീയ യാത്ര',
     },
     eventDate: {
       en: 'April 24–27, 2025 • Tabore Kodumpidi, Pala',
-      ml: 'ഏപ്രിൽ 24–27, 2025 • താബോർ കൊടുമ്പിടി, പാല',
+      ml: 'ഏപ്രിൽ 24–27, 2025 • താബോർ കൊടുമ്പിടി, പാലാ',
     },
     quote: {
       en: 'Rejoice in hope',
@@ -121,7 +133,7 @@ const translations = {
     },
     locationValue: {
       en: 'Tabore Kodumpidi, Pala',
-      ml: 'താബോർ കൊടുമ്പിടി, പാല',
+      ml: 'താബോർ കൊടുമ്പിടി, പാലാ',
     },
     dates: {
       en: 'Dates:',
@@ -181,13 +193,13 @@ const translations = {
     },
     organizer: {
       en: 'Jesus Youth Pala',
-      ml: 'ജീസസ് യൂത്ത് പാല',
+      ml: 'ജീസസ് യൂത്ത് പാലാ',
     },
   },
   footer: {
     copyright: {
       en: 'Copyright © 2024 Jesus Youth Pala. All rights reserved.',
-      ml: 'പകർപ്പവകാശം © 2024 ജീസസ് യൂത്ത് പാല. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.',
+      ml: 'പകർപ്പവകാശം © 2024 ജീസസ് യൂത്ത് പാലാ. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം.',
     },
     contactUs: {
       en: 'Contact Us',

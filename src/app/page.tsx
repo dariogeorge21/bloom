@@ -262,7 +262,7 @@ export default function Home() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="text-gray-700 italic mb-3 text-sm">
-                      &ldquo;It was only after the Blooming Rose program that I was able to love and know the Jesus within me more. I came to that program for the opportunity to spend time with my friends for two or three days, but when I returned to my home, I realized how I could spend the rest of my life with Jesus.&rdquo;
+                      &ldquo;{language === 'en' ? 'It was only after the Blooming Rose program that I was able to love and know the Jesus within me more. I came to that program for the opportunity to spend time with my friends for two or three days, but when I returned to my home, I realized how I could spend the rest of my life with Jesus.' : 'ബ്ലൂമിംഗ് റോസ് പ്രോഗ്രാമിന് ശേഷം മാത്രമാണ് എനിക്ക് എന്നിലുള്ള യേശുവിനെ കൂടുതൽ സ്നേഹിക്കാനും അറിയാനും കഴിഞ്ഞത്. രണ്ടോ മൂന്നോ ദിവസം എന്റെ സുഹൃത്തുക്കളുമായി സമയം ചെലവഴിക്കാനുള്ള അവസരത്തിനായി ഞാൻ ആ പ്രോഗ്രാമിൽ പങ്കെടുത്തു, എന്നാൽ ഞാൻ വീട്ടിലേക്ക് മടങ്ങിയപ്പോൾ, എനിക്ക് എന്റെ ജീവിതത്തിന്റെ ബാക്കി ഭാഗം യേശുവിനോടൊപ്പം എങ്ങനെ ചെലവഴിക്കാൻ കഴിയുമെന്ന് മനസ്സിലായി.'}&rdquo;
                     </p>
                     <p className="font-medium text-blue-800">Ann Maria Saju</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;23</p>
@@ -287,7 +287,7 @@ export default function Home() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="text-gray-700 italic mb-3 text-sm">
-                      &ldquo;You did not choose me, but I chose you (John. 15:16). I understood His call for me as a child of GOD, who needs to be giving His love which I received.&rdquo;
+                      &ldquo;{language === 'en' ? 'You did not choose me, but I chose you (John. 15:16). I understood His call for me as a child of GOD, who needs to be giving His love which I received.' : 'നിങ്ങൾ എന്നെ തിരഞ്ഞെടുത്തതല്ല, ഞാൻ നിങ്ങളെ തിരഞ്ഞെടുത്തതാണ് (യോഹന്നാൻ. 15:16). ഞാൻ സ്വീകരിച്ച അവന്റെ സ്നേഹം നൽകേണ്ട ദൈവത്തിന്റെ കുഞ്ഞായി എന്നോടുള്ള അവന്റെ വിളി ഞാൻ മനസ്സിലാക്കി.'}&rdquo;
                     </p>
                     <p className="font-medium text-pink-800">Agnes Maria Sibi</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;21</p>
@@ -312,7 +312,7 @@ export default function Home() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="text-gray-700 italic mb-3 text-sm">
-                      &ldquo;Those 4 days I experienced Love of God through many people. It spiritually helped me a lot. Got the chance to be more closer to Jesus.&rdquo;
+                      &ldquo;{language === 'en' ? 'Those 4 days I experienced Love of God through many people. It spiritually helped me a lot. Got the chance to be more closer to Jesus.' : 'ആ 4 ദിവസങ്ങളിൽ ഞാൻ നിരവധി ആളുകളിലൂടെ ദൈവത്തിന്റെ സ്നേഹം അനുഭവിച്ചു. അത് എന്നെ ആത്മീയമായി വളരെയധികം സഹായിച്ചു. യേശുവിനോട് കൂടുതൽ അടുക്കാനുള്ള അവസരം ലഭിച്ചു.'}&rdquo;
                     </p>
                     <p className="font-medium text-indigo-800">Tija Thomas</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>
@@ -337,7 +337,7 @@ export default function Home() {
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
                     <p className="text-gray-700 italic mb-3 text-sm">
-                      &ldquo;Amidst &apos;Blooming roses&apos;, my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.&rdquo;
+                      &ldquo;{language === 'en' ? 'Amidst \'Blooming roses\', my soul found its path, which was the stage for crucial turning points in my life! The experience I had through worship, confession, etc. enabled me to walk along with Eeshopa.' : '\'ബ്ലൂമിംഗ് റോസസ്\' മധ്യേ, എന്റെ ആത്മാവ് അതിന്റെ പാത കണ്ടെത്തി, അത് എന്റെ ജീവിതത്തിലെ നിർണായക വഴിത്തിരിവുകൾക്കുള്ള വേദിയായിരുന്നു! ആരാധന, കുമ്പസാരം തുടങ്ങിയവയിലൂടെ എനിക്കുണ്ടായ അനുഭവം ഈശോപ്പയോടൊപ്പം നടക്കാൻ എന്നെ പ്രാപ്തമാക്കി.'}&rdquo;
                     </p>
                     <p className="font-medium text-purple-800">Angel Rose</p>
                     <p className="text-xs text-gray-500">Participant • Blooming Roses &apos;24</p>

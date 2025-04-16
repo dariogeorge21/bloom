@@ -572,12 +572,26 @@ export default function GalleryPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
-                        <p className="font-medium">{language === 'en' ? item.description : item.description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
+                        <p className="font-medium">{language === 'en' ? item.description :
+                          item.description
+                            .replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')
+                            .replace('Blooming Roses 2025', 'ബ്ലൂമിംഗ് റോസസ് 2025')
+                            .replace('Group photo of Blooming Roses 2024', 'ബ്ലൂമിംഗ് റോസസ് 2024 ഗ്രൂപ്പ് ഫോട്ടോ')
+                            .replace('Blooming Roses 2022', 'ബ്ലൂമിംഗ് റോസസ് 2022')
+                            .replace('Blooming Roses 2023', 'ബ്ലൂമിംഗ് റോസസ് 2023')
+                        }</p>
                       </div>
                     </div>
                   </div>
                   <div className="p-4">
-                    <p className="text-sm text-gray-600">{language === 'en' ? item.description : item.description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
+                    <p className="text-sm text-gray-600">{language === 'en' ? item.description :
+                      item.description
+                        .replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')
+                        .replace('Blooming Roses 2025', 'ബ്ലൂമിംഗ് റോസസ് 2025')
+                        .replace('Group photo of Blooming Roses 2024', 'ബ്ലൂമിംഗ് റോസസ് 2024 ഗ്രൂപ്പ് ഫോട്ടോ')
+                        .replace('Blooming Roses 2022', 'ബ്ലൂമിംഗ് റോസസ് 2022')
+                        .replace('Blooming Roses 2023', 'ബ്ലൂമിംഗ് റോസസ് 2023')
+                    }</p>
                   </div>
                 </div>
               ))}
@@ -666,7 +680,14 @@ export default function GalleryPage() {
 
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                <p className="text-sm text-gray-300">{language === 'en' ? imageGalleryItems[selectedImageIndex].description : imageGalleryItems[selectedImageIndex].description.replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')}</p>
+                <p className="text-sm text-gray-300">{language === 'en' ? imageGalleryItems[selectedImageIndex].description :
+                  imageGalleryItems[selectedImageIndex].description
+                    .replace('Highlights of Blooming Roses', 'ബ്ലൂമിംഗ് റോസസിന്റെ ഹൈലൈറ്റുകൾ')
+                    .replace('Blooming Roses 2025', 'ബ്ലൂമിംഗ് റോസസ് 2025')
+                    .replace('Group photo of Blooming Roses 2024', 'ബ്ലൂമിംഗ് റോസസ് 2024 ഗ്രൂപ്പ് ഫോട്ടോ')
+                    .replace('Blooming Roses 2022', 'ബ്ലൂമിംഗ് റോസസ് 2022')
+                    .replace('Blooming Roses 2023', 'ബ്ലൂമിംഗ് റോസസ് 2023')
+                }</p>
               </div>
 
               {/* Close Button */}

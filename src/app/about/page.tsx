@@ -144,7 +144,7 @@ export default function AboutPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                           </svg>
                         </div>
-                        <h4 className="text-lg font-semibold text-blue-800">Sessions - God's Love</h4>
+                        <h4 className="text-lg font-semibold text-blue-800">Sessions - God&apos;s Love</h4>
                       </div>
                       <p className="text-gray-700">
                         Immerse yourself in powerful teachings that illuminate the boundless love of God. Through Scripture, tradition, and personal testimony, discover how deeply the Father loves you and how His divine love can transform every aspect of your life.
@@ -177,7 +177,7 @@ export default function AboutPage() {
                         <h4 className="text-lg font-semibold text-purple-800">Confession</h4>
                       </div>
                       <p className="text-gray-700">
-                        Experience the profound mercy of God through the Sacrament of Reconciliation. In this sacred encounter, receive the healing grace of Christ's forgiveness, unburdening your soul and renewing your baptismal purity. Trained priests will be available to guide you through this beautiful sacrament of healing and peace.
+                        Experience the profound mercy of God through the Sacrament of Reconciliation. In this sacred encounter, receive the healing grace of Christ&apos;s forgiveness, unburdening your soul and renewing your baptismal purity. Trained priests will be available to guide you through this beautiful sacrament of healing and peace.
                       </p>
                     </div>
 
@@ -255,7 +255,7 @@ export default function AboutPage() {
                         <h4 className="text-lg font-semibold text-teal-800">Spiritual Reflection</h4>
                       </div>
                       <p className="text-gray-700">
-                        Embrace moments of guided meditation and personal reflection that invite you to contemplate God's word and presence in your life. These sacred pauses allow the Holy Spirit to speak to your heart, revealing divine wisdom and direction for your unique spiritual journey.
+                        Embrace moments of guided meditation and personal reflection that invite you to contemplate God&apos;s word and presence in your life. These sacred pauses allow the Holy Spirit to speak to your heart, revealing divine wisdom and direction for your unique spiritual journey.
                       </p>
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export default function AboutPage() {
 
                 <div className="mt-8 text-center">
                   <p className="text-blue-800 font-medium italic">
-                    "For where two or three are gathered together in my name, there am I in the midst of them." — Matthew 18:20
+                    &quot;For where two or three are gathered together in my name, there am I in the midst of them.&quot; — Matthew 18:20
                   </p>
                 </div>
               </div>

@@ -284,7 +284,7 @@ export function CountdownTimer() {
               {/* Energetic subheading */}
               <div className="space-y-3">
                 <p className="text-white text-xl font-medium animate-pulse" style={{ animationDuration: '3s' }}>
-                  Your spiritual journey starts <span className="font-bold underline decoration-wavy decoration-yellow-200">NOW!</span>
+                  {/* Your spiritual journey starts <span className="font-bold underline decoration-wavy decoration-yellow-200">NOW!</span> */}
                 </p>
                 <p className="text-blue-100 text-lg italic">
                   <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s' }}>Where</span> are

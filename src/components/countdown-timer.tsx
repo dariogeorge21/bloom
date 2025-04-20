@@ -289,7 +289,7 @@ export function CountdownTimer() {
                 <p className="text-blue-100 text-lg italic">
                   <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s' }}>Where</span> are
                   <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }}>you</span>?
-                  We're <span className="font-bold text-yellow-200">waiting</span> for you!
+                  We&apos;re <span className="font-bold text-yellow-200">waiting</span> for you!
                 </p>
               </div>
 

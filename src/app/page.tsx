@@ -60,8 +60,7 @@ export default function Home() {
             </div>
 
             {/* Countdown Timer */}
-            <div className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-blue-100">
-              <p className="text-xl font-medium mb-4 text-blue-800">{getTranslation('home', 'countdownTitle', language)}</p>
+            <div className="w-full max-w-2xl mx-auto">
               <CountdownTimer />
             </div>
 

@@ -294,11 +294,11 @@ export function CountdownTimer() {
               </div>
 
               {/* Call to action button */}
-              <div className="mt-6">
+              {/* <div className="mt-6">
                 <button className="px-6 py-2 bg-white/20 hover:bg-white/30 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 border border-white/30 backdrop-blur-sm shadow-lg">
                   Join Now
                 </button>
-              </div>
+              </div> */}
 
               {/* Decorative divider */}
               <div className="mt-5 flex items-center justify-center gap-2">

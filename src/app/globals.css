@@ -51,6 +51,35 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Cal Sans Font for English text */
+.cal-sans-active h1,
+.cal-sans-active h2,
+.cal-sans-active h3,
+.cal-sans-active h4,
+.cal-sans-active h5,
+.cal-sans-active h6,
+.cal-sans-active button,
+.cal-sans-active .font-cal,
+.cal-sans-active [lang="en"] {
+  font-family: 'Cal Sans', 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+/* Ensure Malayalam text always uses system fonts */
+[lang="ml"] h1,
+[lang="ml"] h2,
+[lang="ml"] h3,
+[lang="ml"] h4,
+[lang="ml"] h5,
+[lang="ml"] h6,
+[lang="ml"] p,
+[lang="ml"] span,
+[lang="ml"] div,
+[lang="ml"] button {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .bg-background {

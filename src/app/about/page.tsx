@@ -8,6 +8,8 @@ import { useEffect } from "react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { getTranslation } from "@/lib/translations"
 
+// Metadata is defined in metadata.js
+
 export default function AboutPage() {
   const { language } = useLanguage();
   // Add effect to handle hash navigation

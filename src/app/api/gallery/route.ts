@@ -1,42 +1,45 @@
+import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 
-(async function() {
+// Configure Cloudinary
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'demo',
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
-    // Configuration
-    cloudinary.config({ 
-        cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
-        api_key: process.env.CLOUDINARY_API_KEY, 
-        api_secret: process.env.CLOUDINARY_API_SECRET  // Click 'View API Keys' above to copy your API secret
-    });
-    
-    // Upload an image
-     const uploadResult = await cloudinary.uploader
-       .upload(
-           'https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg', {
-               public_id: 'shoes',
-           }
-       )
-       .catch((error) => {
-           console.log(error);
-       });
-    
-    console.log(uploadResult);
-    
-    // Optimize delivery by resizing and applying auto-format and auto-quality
-    const optimizeUrl = cloudinary.url('shoes', {
-        fetch_format: 'auto',
-        quality: 'auto'
-    });
-    
-    console.log(optimizeUrl);
-    
-    // Transform the image: auto-crop to square aspect_ratio
-    const autoCropUrl = cloudinary.url('shoes', {
-        crop: 'auto',
-        gravity: 'auto',
-        width: 500,
-        height: 500,
-    });
-    
-    console.log(autoCropUrl);    
-})();
+// Define gallery items
+const galleryItems = [
+  {
+    id: 1,
+    title: 'Blooming Roses 24',
+    description: 'Highlights from our previous event',
+    imageUrl: '/images/gallery/event1.jpg',
+  },
+  {
+    id: 2,
+    title: 'Worship Session',
+    description: 'Praising the Lord together',
+    imageUrl: '/images/gallery/event2.jpg',
+  },
+  {
+    id: 3,
+    title: 'Group Activities',
+    description: 'Building community through fun activities',
+    imageUrl: '/images/gallery/event3.jpg',
+  },
+];
+
+// GET handler for the API route
+export async function GET() {
+  try {
+    // Return gallery items as JSON
+    return NextResponse.json({ items: galleryItems });
+  } catch (error) {
+    console.error('Error fetching gallery items:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch gallery items' },
+      { status: 500 }
+    );
+  }
+}

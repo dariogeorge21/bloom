@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import "./fonts.css";
+import "./cal-sans.css";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -7,6 +9,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LanguageHtmlAttributes } from "@/components/language-html-attributes";
 import { FloatingLanguageToggle } from "@/components/floating-language-toggle";
 import { PageTransition } from "@/components/page-transition";
+import { FontLoader } from "@/components/font-loader";
 
 export const metadata: Metadata = {
   title: "Blooming Roses | Jesus Youth Pala",
@@ -26,6 +29,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background font-sans antialiased">
         <LanguageProvider>
           <LanguageHtmlAttributes />
+          <FontLoader />
           <PageTransition>
             <div className="relative flex min-h-screen flex-col">
               <Header />

@@ -275,7 +275,7 @@ const imageGalleryItems = [
 const pastParticipantsVideos = [
   {
     id: 1,
-    title: "Jerome ",
+    title: "Jerom ",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1745300426/2_jxns0k.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/c_fill,h_360,w_640,so_0/v1745300426/2_jxns0k.jpg",
   },

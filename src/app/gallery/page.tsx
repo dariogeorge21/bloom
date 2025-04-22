@@ -271,6 +271,28 @@ const imageGalleryItems = [
   }
 ]
 
+// Sample past participants videos with titles
+const pastParticipantsVideos = [
+  {
+    id: 1,
+    title: "Name",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1745300426/2_jxns0k.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/c_fill,h_360,w_640,so_0/v1745300426/2_jxns0k.jpg",
+  },
+  {
+    id: 2,
+    title: "Name ",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1745300426/1_ekw97u.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/c_fill,h_360,w_640,so_0/v1745300426/1_ekw97u.jpg",
+  },
+  {
+    id: 3,
+    title: "Name",
+    videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1745300426/3_lbw0oa.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/c_fill,h_360,w_640,so_0/v1745300426/3_lbw0oa.jpg",
+  }
+]
+
 // Sample video gallery items - only needs videoUrl and description
 const videoGalleryItems = [
   {
@@ -408,6 +430,7 @@ export default function GalleryPage() {
   const { language } = useLanguage();
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(null)
+  const [selectedParticipantVideoIndex, setSelectedParticipantVideoIndex] = useState<number | null>(null)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('photos')
 
@@ -465,11 +488,28 @@ export default function GalleryPage() {
     setIsDialogOpen(true)
   }
 
+  const openParticipantVideoDialog = (index: number) => {
+    setSelectedParticipantVideoIndex(index)
+    setIsDialogOpen(true)
+  }
+
   const handleDialogClose = () => {
     setIsDialogOpen(false)
     setSelectedImageIndex(null)
     setSelectedVideoIndex(null)
+    setSelectedParticipantVideoIndex(null)
   }
+
+  // Function to navigate participant videos
+  const navigateParticipantVideos = useCallback((direction: 'prev' | 'next') => {
+    if (selectedParticipantVideoIndex === null) return
+
+    const newIndex = direction === 'prev'
+      ? (selectedParticipantVideoIndex - 1 + pastParticipantsVideos.length) % pastParticipantsVideos.length
+      : (selectedParticipantVideoIndex + 1) % pastParticipantsVideos.length
+
+    setSelectedParticipantVideoIndex(newIndex)
+  }, [selectedParticipantVideoIndex, pastParticipantsVideos.length])
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -492,12 +532,20 @@ export default function GalleryPage() {
         } else if (e.key === 'Escape') {
           setIsDialogOpen(false)
         }
+      } else if (selectedParticipantVideoIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          navigateParticipantVideos('prev')
+        } else if (e.key === 'ArrowRight') {
+          navigateParticipantVideos('next')
+        } else if (e.key === 'Escape') {
+          setIsDialogOpen(false)
+        }
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isDialogOpen, selectedImageIndex, selectedVideoIndex, activeTab, navigateImages, navigateVideos])
+  }, [isDialogOpen, selectedImageIndex, selectedVideoIndex, selectedParticipantVideoIndex, activeTab, navigateImages, navigateVideos, navigateParticipantVideos])
 
   return (
     <div className="relative">
@@ -541,9 +589,65 @@ export default function GalleryPage() {
             </button>
           </div>
 
-          {/* Previous Blooming Roses heading - now moved above the videos grid */}
+          {/* Our Past Participants section */}
           {activeTab === 'videos' && (
-            <div className="mb-8 text-center" id="videos">
+            <div className="mb-12 text-center" id="videos">
+              <h2 className="text-2xl font-bold text-blue-800 mb-4">{language === 'en' ? 'Our Past Participants' : 'ഞങ്ങളുടെ മുൻ പങ്കാളികൾ'}</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+                {language === 'en' ? 'Watch videos from our past participants and their experiences' : 'ഞങ്ങളുടെ മുൻ പങ്കാളികളുടെ വീഡിയോകളും അവരുടെ അനുഭവങ്ങളും കാണുക'}
+              </p>
+
+              {/* Past Participants Video Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                {pastParticipantsVideos.map((video, index) => (
+                  <div
+                    key={video.id}
+                    className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                    onClick={() => openParticipantVideoDialog(index)}
+                  >
+                    <div className="relative aspect-video overflow-hidden">
+                      {/* Video thumbnail with fallback */}
+                      <div className="relative w-full h-full bg-gray-200 flex items-center justify-center">
+                        {/* Fallback icon */}
+                        <div className="absolute inset-0 flex items-center justify-center z-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+
+                        {/* Actual thumbnail */}
+                        <Image
+                          src={video.thumbnailUrl}
+                          alt="Participant video thumbnail"
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105 z-10"
+                          unoptimized={true}
+                          priority={index < 4}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          onError={(e) => {
+                            // Hide the image on error to show the fallback
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                          }}
+                        />
+                      </div>
+
+                      {/* Play button overlay */}
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                          <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600">{language === 'en' ? video.title : video.title.replace('Blooming Roses', 'ബ്ലൂമിംഗ് റോസസ്').replace('Beautiful moments', 'മനോഹരമായ നിമിഷങ്ങൾ').replace('Prayer and worship session', 'പ്രാർത്ഥനയും ആരാധനയും').replace('Highlights', 'ഹൈലൈറ്റുകൾ')}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Previous Blooming Roses heading */}
               <h2 className="text-2xl font-bold text-blue-800 mb-4">{language === 'en' ? 'Previous Blooming Roses' : 'മുൻ ബ്ലൂമിംഗ് റോസസ്'}</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 {language === 'en' ? 'Click & watch highlights from our past events and relive the beautiful moments' : 'ഞങ്ങളുടെ മുൻ ഇവന്റുകളിൽ നിന്നുള്ള ഹൈലൈറ്റുകൾ ക്ലിക്ക് ചെയ്ത് കാണുക, മനോഹരമായ നിമിഷങ്ങൾ വീണ്ടും അനുഭവിക്കുക'}
@@ -694,6 +798,69 @@ export default function GalleryPage() {
               <button
                 onClick={handleDialogClose}
                 className="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors"
+                aria-label="Close"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-white">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Participant Video Lightbox Dialog */}
+      <Dialog open={isDialogOpen && selectedParticipantVideoIndex !== null} onOpenChange={handleDialogClose}>
+        <DialogContent className="max-w-5xl p-0 bg-black border-none overflow-hidden rounded-lg" onEscapeKeyDown={handleDialogClose}>
+          {selectedParticipantVideoIndex !== null && (
+            <div className="relative flex items-center justify-center w-full max-h-[90vh] bg-black">
+              {/* Video player using HTML5 video element */}
+              <video
+                src={pastParticipantsVideos[selectedParticipantVideoIndex].videoUrl}
+                className="max-w-full max-h-[80vh] object-contain"
+                controls
+                autoPlay
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  navigateParticipantVideos('prev')
+                }}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors z-10"
+                aria-label="Previous video"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-white">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  navigateParticipantVideos('next')
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors z-10"
+                aria-label="Next video"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6 text-white">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+
+              {/* Video Info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white z-10">
+                <p className="text-sm text-gray-300">{language === 'en' ? pastParticipantsVideos[selectedParticipantVideoIndex].title : pastParticipantsVideos[selectedParticipantVideoIndex].title.replace('Blooming Roses', 'ബ്ലൂമിംഗ് റോസസ്').replace('Beautiful moments', 'മനോഹരമായ നിമിഷങ്ങൾ').replace('Prayer and worship session', 'പ്രാർത്ഥനയും ആരാധനയും').replace('Highlights', 'ഹൈലൈറ്റുകൾ')}</p>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={handleDialogClose}
+                className="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-colors z-10"
                 aria-label="Close"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-white">

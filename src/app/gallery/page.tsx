@@ -287,7 +287,7 @@ const pastParticipantsVideos = [
   },
   {
     id: 3,
-    title: Click to view",
+    title: "Click to view",
     videoUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/v1745300426/3_lbw0oa.mp4",
     thumbnailUrl: "https://res.cloudinary.com/dobqxxtml/video/upload/c_fill,h_360,w_640,so_0/v1745300426/3_lbw0oa.jpg",
   }

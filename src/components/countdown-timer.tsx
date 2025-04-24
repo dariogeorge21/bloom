@@ -287,9 +287,9 @@ export function CountdownTimer() {
                   {/* Your spiritual journey starts <span className="font-bold underline decoration-wavy decoration-yellow-200">NOW!</span> */}
                 </p>
                 <p className="text-blue-100 text-lg italic">
-                  <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s' }}>Where</span> are
-                  <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }}>you</span>?
-                  We&apos;re <span className="font-bold text-yellow-200">waiting</span> for you!
+                  <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s' }}>Welcome</span> dear
+                  <span className="inline-block animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }}></span>
+                   <span className="font-bold text-yellow-200"> Children of God</span> !!
                 </p>
               </div>
 

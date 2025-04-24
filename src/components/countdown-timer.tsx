@@ -113,7 +113,7 @@ export function CountdownTimer() {
     // For testing purposes, use a closer date in test mode
     const eventDate = testMode
       ? new Date(Date.now() + 25000) // 25 seconds from now for testing
-      : new Date('2025-04-24T17:00:00') // Actual event date
+      : new Date('2025-04-24T17:30:00') // Actual event date
 
     const timer = setInterval(() => {
       const now = new Date()

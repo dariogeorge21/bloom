@@ -31,6 +31,7 @@ export function CountdownTimer() {
   const [showFlip, setShowFlip] = useState<boolean>(false)
   const [showConfetti, setShowConfetti] = useState<boolean>(false)
   const [windowSize, setWindowSize] = useState<{width: number, height: number}>({ width: 0, height: 0 })
+  const [isEventEnded, setIsEventEnded] = useState(false)
 
   // Ref to track if the countdown has completed
   const countdownCompletedRef = useRef<boolean>(false)
@@ -188,6 +189,37 @@ export function CountdownTimer() {
 
     return () => clearInterval(timer)
   }, [testMode])
+
+  useEffect(() => {
+    const eventDate = new Date('2025-04-24T17:30:00')
+    const now = new Date()
+    
+    if (now.getTime() > eventDate.getTime()) {
+      setIsEventEnded(true)
+    }
+  }, [])
+
+  if (isEventEnded) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-12 text-center">
+        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 border border-blue-100">
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">
+            Blooming Roses 2K25
+          </h2>
+          <div className="h-px bg-blue-100 w-24 mx-auto mb-6"></div>
+          <p className="text-gray-700 text-lg mb-4">
+            The program has concluded successfully with the abundant blessings of our Almighty God.
+          </p>
+          <p className="text-blue-600 italic font-medium">
+            Thank you for being part of this blessed journey.
+          </p>
+          <div className="mt-6 text-sm text-gray-500">
+            April 24-27, 2025 • Tabore Kodumpidi, Pala
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="relative">
